@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Book_Library_Management_3.Models.Context
+namespace Book_library_management_3.Models.Context
 {
     public class DbContext : IDisposable
     {
@@ -23,7 +23,7 @@ namespace Book_Library_Management_3.Models.Context
             SQLiteConnection conn = null;
             try
             {
-                string dbName = @"C:\Users\rizkirmdhn\Desktop\FP\Book-Library-Management-2\Database\book-libray-management.db";
+                string dbName = @"C:\Users\rizkirmdhn\Desktop\FP\Book-library-management-3\Database\book-libray-management.db";
 
                 string connectionString = string.Format("Data Source ={0}; FailIfMissing = True", dbName);
 

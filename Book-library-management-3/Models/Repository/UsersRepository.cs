@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Book_library_management_3.Models.Entity;
-using Book_Library_Management_3.Models.Context;
+using Book_library_management_3.Models.Context;
 
 
-namespace Book_Library_Management_3.Models.Repository
+namespace Book_library_management_3.Models.Repository
 {
     public class usersRepository
     {
@@ -31,7 +31,7 @@ namespace Book_Library_Management_3.Models.Repository
                 command.Parameters.AddWithValue("@name", users.name);
                 command.Parameters.AddWithValue("@email", users.email);
                 command.Parameters.AddWithValue("@status", users.status);
-                command.Parameters.AddWithValue("@date_register", DateTime.Now);
+                command.Parameters.AddWithValue("@date_register", users.date_register);
 
                 try
                 {
@@ -42,6 +42,13 @@ namespace Book_Library_Management_3.Models.Repository
                     System.Diagnostics.Debug.Print("Create error : {0}", ex.Message);
                 }
             }
+
+            return result;
+        }
+
+        public int checkUserAdmin(Users users)
+        {
+            int result = 0;
 
             return result;
         }

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
-using Book_Library_Management_3.Models.Context;
+using Book_library_management_3.Models.Context;
 using Book_library_management_3.Models.Entity;
 
-namespace Book_Library_Management_3.Models.Repository
+namespace Book_library_management_3.Models.Repository
 {
     public class BooksRepository
     {
