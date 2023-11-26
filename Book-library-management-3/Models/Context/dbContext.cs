@@ -33,8 +33,7 @@ namespace Book_library_management_3.Models.Context
 
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.Print("Open Connection Error: {0}",
-               ex.Message);
+                System.Diagnostics.Debug.Print("Open Connection Error: {0}", ex.Message);
             }
             return conn;
         }

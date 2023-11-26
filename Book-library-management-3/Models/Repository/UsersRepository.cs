@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Book_library_management_3.Models.Entity;
 using Book_library_management_3.Models.Context;
+using Book_library_management_3.Views;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 
 
 namespace Book_library_management_3.Models.Repository
@@ -49,7 +52,17 @@ namespace Book_library_management_3.Models.Repository
         public int checkUserAdmin(Users users)
         {
             int result = 0;
+            string query = "SELECT * FROM users WHERE username = @username AND password = @password AND status = 'admin'";
+            using (SQLiteCommand cmd = new SQLiteCommand(query, _connection))
+            {
+                cmd.Parameters.AddWithValue("@username", users.username);
+                cmd.Parameters.AddWithValue("@password", users.password);
 
+                using (SQLiteDataReader reader = cmd.ExecuteReader()) {
+                    if (reader.Read()) result = 1;
+                    else System.Diagnostics.Debug.Print("Username Not Found");
+                }
+            }
             return result;
         }
     }

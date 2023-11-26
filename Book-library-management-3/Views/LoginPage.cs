@@ -24,7 +24,20 @@ namespace Book_library_management_3.Views
         private void btn_login_Click(object sender, EventArgs e)
         {
 
+            DbContext dbContext = new DbContext();
+            Users usr = new Users();
+            usr.username = txtBox_username.Text;
+            usr.password = txtBox_password.Text;
 
+            usersRepository login = new usersRepository(dbContext);
+            int result = login.checkUserAdmin(usr);
+            if (result == 0)
+            {
+                MessageBox.Show("User tidak ada");
+            } else
+            {
+                MessageBox.Show("user ada");
+            }
 
         }
     }
