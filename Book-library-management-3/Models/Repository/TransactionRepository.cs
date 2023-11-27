@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Book_library_management_3.Models.Entity;
 using Book_library_management_3.Models.Context;
+using Book_library_management_3.Models.Repository;
 
 
 namespace Book_library_management_3.Models.Repository
@@ -44,6 +45,16 @@ namespace Book_library_management_3.Models.Repository
                 }
             }
 
+            if (result !=0){
+
+                Books book = new Books();
+                book.isbn = transactions.isbn;
+                using (DbContext context = new DbContext())
+                {
+                    var books = new BooksRepository(context);
+                    books.updateStocksBooks(book);
+                }
+            }
             return result;
         }
 

@@ -46,15 +46,32 @@ namespace Book_library_management_3.Models.Repository
             return result;
         }
 
-        public int updateBook(Books books)
+        public int updateStocksBooks(Books books)
         {
             int result = 0;
+            const string sqlUpdateBook = @"UPDATE books SET stock = stock - 1 WHERE isbn = @isbn";
 
-            string sql = @"";
+            using (SQLiteCommand updateCommand = new SQLiteCommand(sqlUpdateBook, _connection))
+            {
+                updateCommand.Parameters.AddWithValue("@isbn", books.isbn);
+
+                try
+                {
+                    result = updateCommand.ExecuteNonQuery();
+                }
+                catch (SQLiteException ex)
+                {
+                    System.Diagnostics.Debug.Print("SQLite Error: {0}", ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.Print("Error: {0}", ex.Message);
+                }
+            }
 
             return result;
-
         }
+
 
         public int deleteBook(Books books)
         {

@@ -20,9 +20,9 @@ namespace Book_library_management_3.Models.Repository
             _connection = context.Conn;
         }
 
-        public List<Histoy> getAllHistory()
+        public List<History> getAllHistory()
         {
-            List<Histoy> list = new List<Histoy>();
+            List<History> list = new List<History>();
             try
             {
                 string sql = @"select * from history";
@@ -35,7 +35,7 @@ namespace Book_library_management_3.Models.Repository
                         while (dtr.Read())
                         {
                             // proses konversi dari row result set ke object
-                            Histoy histoy = new Histoy();
+                            History histoy = new History();
                             histoy.history_id = (int)dtr["history_id"];
                             histoy.transactions_id = (int)dtr["transaction_id"];
                             histoy.username = dtr["username"].ToString();

@@ -59,9 +59,11 @@
   <ItemGroup>
     <Compile Include="Models\Context\dbContext.cs" />
     <Compile Include="Models\Entity\Books.cs" />
+    <Compile Include="Models\Entity\History.cs" />
     <Compile Include="Models\Entity\Transactions.cs" />
     <Compile Include="Models\Entity\Users.cs" />
     <Compile Include="Models\Repository\BooksRepository.cs" />
+    <Compile Include="Models\Repository\HistoryRepository.cs" />
     <Compile Include="Models\Repository\TransactionRepository.cs" />
     <Compile Include="Models\Repository\UsersRepository.cs" />
     <Compile Include="Program.cs" />
@@ -87,6 +89,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\DashboardPage.resx">
+      <DependentUpon>DashboardPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
