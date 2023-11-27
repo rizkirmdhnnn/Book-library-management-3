@@ -77,7 +77,21 @@ namespace Book_library_management_3.Models.Repository
         {
             int result = 0;
 
-            string sql = @"";
+            string sql = @"DELETE FROM books WHERE isbn = @isbn";
+
+            using (SQLiteCommand command = new SQLiteCommand(sql, _connection))
+            {
+                command.Parameters.AddWithValue("@isbn", books.isbn);
+
+                try
+                {
+                    result = command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.Print("Create error : {0}", ex.Message);
+                }
+            }
 
             return result;
         }
