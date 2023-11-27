@@ -28,12 +28,204 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txt_logo = new System.Windows.Forms.Label();
+            this.btn_dashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_books = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_transactions = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_return = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_history = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_member = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_logout = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.btn_logout);
+            this.guna2Panel1.Controls.Add(this.btn_member);
+            this.guna2Panel1.Controls.Add(this.btn_history);
+            this.guna2Panel1.Controls.Add(this.btn_return);
+            this.guna2Panel1.Controls.Add(this.btn_transactions);
+            this.guna2Panel1.Controls.Add(this.btn_books);
+            this.guna2Panel1.Controls.Add(this.guna2Panel3);
+            this.guna2Panel1.Controls.Add(this.btn_dashboard);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(194, 519);
+            this.guna2Panel1.TabIndex = 0;
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel3.Controls.Add(this.txt_logo);
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(194, 115);
+            this.guna2Panel3.TabIndex = 1;
+            // 
+            // txt_logo
+            // 
+            this.txt_logo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_logo.AutoSize = true;
+            this.txt_logo.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_logo.Location = new System.Drawing.Point(66, 45);
+            this.txt_logo.Name = "txt_logo";
+            this.txt_logo.Size = new System.Drawing.Size(70, 26);
+            this.txt_logo.TabIndex = 0;
+            this.txt_logo.Text = "LOGO";
+            // 
+            // btn_dashboard
+            // 
+            this.btn_dashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_dashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btn_dashboard.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dashboard.ForeColor = System.Drawing.Color.White;
+            this.btn_dashboard.Location = new System.Drawing.Point(0, 115);
+            this.btn_dashboard.Name = "btn_dashboard";
+            this.btn_dashboard.Size = new System.Drawing.Size(194, 45);
+            this.btn_dashboard.TabIndex = 0;
+            this.btn_dashboard.Text = "Dashboard";
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel2.Location = new System.Drawing.Point(194, 0);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(861, 519);
+            this.guna2Panel2.TabIndex = 1;
+            // 
+            // btn_books
+            // 
+            this.btn_books.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_books.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_books.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_books.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_books.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btn_books.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_books.ForeColor = System.Drawing.Color.White;
+            this.btn_books.Location = new System.Drawing.Point(0, 160);
+            this.btn_books.Name = "btn_books";
+            this.btn_books.Size = new System.Drawing.Size(194, 45);
+            this.btn_books.TabIndex = 2;
+            this.btn_books.Text = "Books";
+            // 
+            // btn_transactions
+            // 
+            this.btn_transactions.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_transactions.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_transactions.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_transactions.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_transactions.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btn_transactions.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_transactions.ForeColor = System.Drawing.Color.White;
+            this.btn_transactions.Location = new System.Drawing.Point(0, 205);
+            this.btn_transactions.Name = "btn_transactions";
+            this.btn_transactions.Size = new System.Drawing.Size(194, 45);
+            this.btn_transactions.TabIndex = 3;
+            this.btn_transactions.Text = "Transactions";
+            // 
+            // btn_return
+            // 
+            this.btn_return.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_return.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_return.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_return.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_return.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btn_return.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_return.ForeColor = System.Drawing.Color.White;
+            this.btn_return.Location = new System.Drawing.Point(0, 250);
+            this.btn_return.Name = "btn_return";
+            this.btn_return.Size = new System.Drawing.Size(194, 45);
+            this.btn_return.TabIndex = 4;
+            this.btn_return.Text = "Return";
+            // 
+            // btn_history
+            // 
+            this.btn_history.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_history.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_history.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_history.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_history.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btn_history.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_history.ForeColor = System.Drawing.Color.White;
+            this.btn_history.Location = new System.Drawing.Point(0, 295);
+            this.btn_history.Name = "btn_history";
+            this.btn_history.Size = new System.Drawing.Size(194, 45);
+            this.btn_history.TabIndex = 5;
+            this.btn_history.Text = "History";
+            // 
+            // btn_member
+            // 
+            this.btn_member.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_member.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_member.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_member.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_member.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btn_member.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_member.ForeColor = System.Drawing.Color.White;
+            this.btn_member.Location = new System.Drawing.Point(0, 340);
+            this.btn_member.Name = "btn_member";
+            this.btn_member.Size = new System.Drawing.Size(194, 45);
+            this.btn_member.TabIndex = 6;
+            this.btn_member.Text = "Members";
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_logout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_logout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_logout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_logout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_logout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btn_logout.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.ForeColor = System.Drawing.Color.White;
+            this.btn_logout.Location = new System.Drawing.Point(0, 474);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(194, 45);
+            this.btn_logout.TabIndex = 7;
+            this.btn_logout.Text = "Logout";
+            // 
+            // DashboardPage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1055, 519);
+            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.guna2Panel1);
+            this.Name = "DashboardPage";
             this.Text = "DashboardPage";
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button btn_dashboard;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private System.Windows.Forms.Label txt_logo;
+        private Guna.UI2.WinForms.Guna2Button btn_books;
+        private Guna.UI2.WinForms.Guna2Button btn_logout;
+        private Guna.UI2.WinForms.Guna2Button btn_member;
+        private Guna.UI2.WinForms.Guna2Button btn_history;
+        private Guna.UI2.WinForms.Guna2Button btn_return;
+        private Guna.UI2.WinForms.Guna2Button btn_transactions;
     }
 }

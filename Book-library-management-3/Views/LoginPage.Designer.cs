@@ -48,9 +48,9 @@
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
             this.guna2Panel2.Controls.Add(this.guna2Panel3);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(388, 0);
+            this.guna2Panel2.Location = new System.Drawing.Point(425, 0);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(579, 504);
+            this.guna2Panel2.Size = new System.Drawing.Size(542, 504);
             this.guna2Panel2.TabIndex = 1;
             // 
             // guna2Panel3
@@ -63,7 +63,7 @@
             this.guna2Panel3.Controls.Add(this.txtBox_username);
             this.guna2Panel3.Controls.Add(this.label1);
             this.guna2Panel3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Panel3.Location = new System.Drawing.Point(96, 41);
+            this.guna2Panel3.Location = new System.Drawing.Point(78, 41);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(405, 424);
             this.guna2Panel3.TabIndex = 0;
@@ -166,7 +166,7 @@
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(388, 504);
+            this.guna2Panel1.Size = new System.Drawing.Size(425, 504);
             this.guna2Panel1.TabIndex = 0;
             // 
             // LoginPage

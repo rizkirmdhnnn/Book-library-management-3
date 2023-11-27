@@ -34,9 +34,12 @@ namespace Book_library_management_3.Views
             if (result == 0)
             {
                 MessageBox.Show("User tidak ada");
-            } else
+            } 
+            else
             {
-                MessageBox.Show("user ada");
+                DashboardPage dashboardPage = new DashboardPage();
+                dashboardPage.Show();
+                this.Hide();
             }
 
         }
