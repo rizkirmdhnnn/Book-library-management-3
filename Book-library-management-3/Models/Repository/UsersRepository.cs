@@ -58,12 +58,78 @@ namespace Book_library_management_3.Models.Repository
                 cmd.Parameters.AddWithValue("@username", users.username);
                 cmd.Parameters.AddWithValue("@password", users.password);
 
-                using (SQLiteDataReader reader = cmd.ExecuteReader()) {
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
+                {
                     if (reader.Read()) result = 1;
                     else System.Diagnostics.Debug.Print("Username Not Found");
                 }
             }
             return result;
+        }
+
+        public List<Users> getUser()
+        {
+            List<Users> list = new List<Users>();
+            try
+            {
+                string sql = @"select * from users where status='user'";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
+                {
+                    using (SQLiteDataReader dtr = cmd.ExecuteReader())
+                    {
+                        while (dtr.Read())
+                        {
+                            Users user = new Users();
+                            user.username = dtr["username"].ToString();
+                            user.password = dtr["password"].ToString();
+                            user.name = dtr["name"].ToString();
+                            user.email = dtr["email"].ToString();
+                            user.date_register = dtr["date_register"].ToString();
+                            list.Add(user);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print("getAllTransactions error: {0}", ex.Message);
+            }
+            return list;
+
+
+        }
+        public List<Users> getUserAdmin()
+        {
+            List<Users> list = new List<Users>();
+            try
+            {
+                string sql = @"select * from users where status='admin'";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
+                {
+                    using (SQLiteDataReader dtr = cmd.ExecuteReader())
+                    {
+                        while (dtr.Read())
+                        {
+                            Users user = new Users();
+                            user.username = dtr["username"].ToString();
+                            user.password = dtr["password"].ToString();
+                            user.name = dtr["name"].ToString();
+                            user.email = dtr["email"].ToString();
+                            user.date_register = dtr["date_register"].ToString();
+                            list.Add(user);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print("getAllTransactions error: {0}", ex.Message);
+            }
+            return list;
+
+
         }
     }
 }
