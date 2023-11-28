@@ -1,0 +1,142 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Book_library_management_3.Models.Entity;
+using Book_library_management_3.Models.Repository;
+using Book_library_management_3.Models.Context;
+using Book_library_management_3.Views;
+
+namespace Book_library_management_3.Controllers
+{
+    public class UsersControler
+    {
+        private usersRepository _repository;
+        public int checkUserAdmin(Users users)
+        {
+            int result = 0;
+
+            if (string.IsNullOrEmpty(users.username) && string.IsNullOrEmpty(users.password))
+            {
+                MessageBox.Show("Username and Password cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            if (string.IsNullOrEmpty(users.username))
+            {
+                MessageBox.Show("Username cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            if (string.IsNullOrEmpty(users.password))
+            {
+                MessageBox.Show("Password cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            using(DbContext context = new DbContext())
+            {
+                _repository = new usersRepository(context);
+                result = _repository.checkUserAdmin(users);
+            }
+
+            if(result == 0)
+            {
+                MessageBox.Show("Data not found, login failed", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else
+            {
+                MessageBox.Show("Data found, login successful", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DashboardPage dashboardPage = new DashboardPage();
+                dashboardPage.Show();
+            }
+
+            return result;
+        }
+
+        public int addUser(Users users)
+        {
+            int result = 0;
+
+            if (string.IsNullOrEmpty(users.username))
+            {
+                MessageBox.Show("Username cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            if (string.IsNullOrEmpty(users.password))
+            {
+                MessageBox.Show("Password cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            if (string.IsNullOrEmpty(users.name))
+            {
+                MessageBox.Show("Name cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            if (string.IsNullOrEmpty(users.email))
+            {
+                MessageBox.Show("Email cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            if (string.IsNullOrEmpty(users.status))
+            {
+                MessageBox.Show("Status cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            if (string.IsNullOrEmpty(users.date_register))
+            {
+                MessageBox.Show("Date cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            using(DbContext context = new DbContext())
+            {
+                _repository = new usersRepository(context);
+                result = _repository.addUser(users);
+                
+            }
+
+            if(result == 0)
+            {
+                MessageBox.Show("Eror", "Information (Controler)", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            } else
+            {
+                MessageBox.Show("Data added successfully", "Information (Controler)", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+            return result;
+        }
+
+        public List<Users> getUsers()
+        {
+            List<Users> list = new List<Users>();
+            using(DbContext context = new DbContext())
+            {
+                _repository = new usersRepository(context);
+                list = _repository.getUser();
+            }
+
+            return list;
+        }
+
+        public List<Users> getUserAdmin()
+        {
+            List<Users> list = new List<Users>();
+            using (DbContext context = new DbContext())
+            {
+                _repository = new usersRepository(context);
+                list = _repository.getUserAdmin();
+            }
+
+            return list;
+        }
+
+    }
+}
