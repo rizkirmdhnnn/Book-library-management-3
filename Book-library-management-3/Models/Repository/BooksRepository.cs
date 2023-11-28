@@ -46,17 +46,17 @@ namespace Book_library_management_3.Models.Repository
             return result;
         }
 
-        public int updateStocksBooks(Books books, string IncreseincreaseOrDecrease)
+        public int updateStocksBooks(Books books, string IncreseOrDecrease)
         {
             int result = 0;
             string sqlUpdateBook = "";
 
-            if (IncreseincreaseOrDecrease == "+")
+            if (IncreseOrDecrease == "+")
             {
                 sqlUpdateBook = @"UPDATE books SET stock = stock + 1 WHERE isbn = @isbn";
             }
             
-            if (IncreseincreaseOrDecrease == "-")
+            if (IncreseOrDecrease == "-")
             {
                 sqlUpdateBook = @"UPDATE books SET stock = stock - 1 WHERE isbn = @isbn";
             }
