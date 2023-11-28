@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Book_library_management_3.Models.Context;
 using Book_library_management_3.Models.Entity;
-using Book_library_management_3.Models.Repository;
+using Book_library_management_3.Controllers;
 
 namespace Book_library_management_3.Views
 {
@@ -24,24 +23,16 @@ namespace Book_library_management_3.Views
         private void btn_login_Click(object sender, EventArgs e)
         {
 
-            DbContext dbContext = new DbContext();
-            Users usr = new Users();
-            usr.username = txtBox_username.Text;
-            usr.password = txtBox_password.Text;
-
-            usersRepository login = new usersRepository(dbContext);
-            int result = login.checkUserAdmin(usr);
-            if (result == 0)
+            Users users = new Users()
             {
-                MessageBox.Show("User tidak ada");
-            } 
-            else
-            {
-                DashboardPage dashboardPage = new DashboardPage();
-                dashboardPage.Show();
-                this.Hide();
-            }
+                username = txtBox_username.Text,
+                password = txtBox_password.Text
+            };
 
+            UsersControler _usersControler = new UsersControler();
+            int result = _usersControler.checkUserAdmin(users);
+
+            if (result > 0) this.Hide();
         }
     }
 }
