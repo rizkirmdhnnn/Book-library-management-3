@@ -46,10 +46,20 @@ namespace Book_library_management_3.Models.Repository
             return result;
         }
 
-        public int updateStocksBooks(Books books)
+        public int updateStocksBooks(Books books, string IncreseincreaseOrDecrease)
         {
             int result = 0;
-            const string sqlUpdateBook = @"UPDATE books SET stock = stock - 1 WHERE isbn = @isbn";
+            string sqlUpdateBook = "";
+
+            if (IncreseincreaseOrDecrease == "+")
+            {
+                sqlUpdateBook = @"UPDATE books SET stock = stock + 1 WHERE isbn = @isbn";
+            }
+            
+            if (IncreseincreaseOrDecrease == "-")
+            {
+                sqlUpdateBook = @"UPDATE books SET stock = stock - 1 WHERE isbn = @isbn";
+            }
 
             using (SQLiteCommand updateCommand = new SQLiteCommand(sqlUpdateBook, _connection))
             {
