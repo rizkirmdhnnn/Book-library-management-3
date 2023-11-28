@@ -25,24 +25,37 @@ namespace Book_library_management_3.Models.Repository
         {
             int result = 0;
 
-            string sql = @"insert into transactions (transaction_id, username, isbn, date, status) values  (@transaction_id, @username, @isbn, @date, @status)";
+            string sqlInsert = @"INSERT INTO transactions (transaction_id, username, isbn, date, status) VALUES  (@transaction_id, @username, @isbn, @date, @status)";
+            string sqlCheckStock = @"SELECT stocks FROM books WHERE isbn = @isbn";
 
-            using (SQLiteCommand command = new SQLiteCommand(sql, _connection))
+            using (SQLiteCommand checkStock = new SQLiteCommand(sqlCheckStock, _connection))
             {
-                command.Parameters.AddWithValue("@transaction_id", transactions.transactions_id);
-                command.Parameters.AddWithValue("@username", transactions.username);
-                command.Parameters.AddWithValue("@isbn", transactions.isbn);
-                command.Parameters.AddWithValue("@date", DateTime.Now);
-                command.Parameters.AddWithValue("@status", "peminjaman");
+                checkStock.Parameters.AddWithValue("@isbn", transactions.isbn);
 
-                try
+                int stock = (int)checkStock.ExecuteScalar();
+
+                if(stock > 0)
                 {
-                    result = command.ExecuteNonQuery();
+
+                    using (SQLiteCommand command = new SQLiteCommand(sqlInsert, _connection))
+                    {
+                        command.Parameters.AddWithValue("@transaction_id", transactions.transactions_id);
+                        command.Parameters.AddWithValue("@username", transactions.username);
+                        command.Parameters.AddWithValue("@isbn", transactions.isbn);
+                        command.Parameters.AddWithValue("@date", DateTime.Now);
+                        command.Parameters.AddWithValue("@status", "peminjaman");
+
+                        try
+                        {
+                            result = command.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.Print("Create error : {0}", ex.Message);
+                        }
+                    }
                 }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.Print("Create error : {0}", ex.Message);
-                }
+
             }
 
             if (result !=0){
@@ -55,6 +68,7 @@ namespace Book_library_management_3.Models.Repository
                     books.updateStocksBooks(book);
                 }
             }
+
             return result;
         }
 
