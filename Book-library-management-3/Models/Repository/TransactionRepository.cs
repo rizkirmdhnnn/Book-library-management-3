@@ -65,7 +65,7 @@ namespace Book_library_management_3.Models.Repository
                 using (DbContext context = new DbContext())
                 {
                     var books = new BooksRepository(context);
-                    books.updateStocksBooks(book);
+                    books.updateStocksBooks(book, "-");
                 }
             }
 
@@ -94,6 +94,18 @@ namespace Book_library_management_3.Models.Repository
                 catch (Exception ex)
                 {
                     System.Diagnostics.Debug.Print("Create error : {0}", ex.Message);
+                }
+            }
+
+            if (result != 0)
+            {
+
+                Books book = new Books();
+                book.isbn = transactions.isbn;
+                using (DbContext context = new DbContext())
+                {
+                    var books = new BooksRepository(context);
+                    books.updateStocksBooks(book, "+");
                 }
             }
 
