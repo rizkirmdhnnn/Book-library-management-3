@@ -67,7 +67,7 @@
     <Compile Include="Models\Entity\Users.cs" />
     <Compile Include="Models\Repository\BooksRepository.cs" />
     <Compile Include="Models\Repository\HistoryRepository.cs" />
-    <Compile Include="Models\Repository\TransactionRepository.cs" />
+    <Compile Include="Models\Repository\TransactionsRepository.cs" />
     <Compile Include="Models\Repository\UsersRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

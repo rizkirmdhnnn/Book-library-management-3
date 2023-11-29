@@ -25,40 +25,58 @@ namespace Book_library_management_3.Models.Repository
         {
             int result = 0;
 
+            string sqlCheckUserBorrowing = @"SELECT username, isbn, date  FROM transactions WHERE username = @username AND isbn = @isbn AND status = 'Peminjaman'";
             string sqlInsert = @"INSERT INTO transactions (transaction_id, username, isbn, date, status) VALUES  (@transaction_id, @username, @isbn, @date, @status)";
             string sqlCheckStock = @"SELECT stocks FROM books WHERE isbn = @isbn";
 
-            using (SQLiteCommand checkStock = new SQLiteCommand(sqlCheckStock, _connection))
+            using (SQLiteCommand checkUserBorrowing = new SQLiteCommand(sqlCheckUserBorrowing, _connection))
             {
-                checkStock.Parameters.AddWithValue("@isbn", transactions.isbn);
 
-                int stock = (int)checkStock.ExecuteScalar();
+                checkUserBorrowing.Parameters.AddWithValue("@username", transactions.username);
+                checkUserBorrowing.Parameters.AddWithValue("@isbn", transactions.isbn);
 
-                if(stock > 0)
+                object resultObj = checkUserBorrowing.ExecuteScalar();
+
+                if (resultObj != null) // Jika baris ditemukan, buku masih dipinjam
                 {
-
-                    using (SQLiteCommand command = new SQLiteCommand(sqlInsert, _connection))
+                    result = 00;
+                    return result;
+                } else
+                {
+                    using (SQLiteCommand checkStock = new SQLiteCommand(sqlCheckStock, _connection))
                     {
-                        command.Parameters.AddWithValue("@transaction_id", transactions.transactions_id);
-                        command.Parameters.AddWithValue("@username", transactions.username);
-                        command.Parameters.AddWithValue("@isbn", transactions.isbn);
-                        command.Parameters.AddWithValue("@date", DateTime.Now);
-                        command.Parameters.AddWithValue("@status", "peminjaman");
+                        checkStock.Parameters.AddWithValue("@isbn", transactions.isbn);
 
-                        try
+                        int stock = (int)checkStock.ExecuteScalar();
+
+                        if (stock > 0)
                         {
-                            result = command.ExecuteNonQuery();
+
+                            using (SQLiteCommand command = new SQLiteCommand(sqlInsert, _connection))
+                            {
+                                command.Parameters.AddWithValue("@transaction_id", transactions.transactions_id);
+                                command.Parameters.AddWithValue("@username", transactions.username);
+                                command.Parameters.AddWithValue("@isbn", transactions.isbn);
+                                command.Parameters.AddWithValue("@date", DateTime.Now);
+                                command.Parameters.AddWithValue("@status", "Peminjaman");
+
+                                try
+                                {
+                                    result = command.ExecuteNonQuery();
+                                }
+                                catch (Exception ex)
+                                {
+                                    System.Diagnostics.Debug.Print("Create error : {0}", ex.Message);
+                                }
+                            }
                         }
-                        catch (Exception ex)
-                        {
-                            System.Diagnostics.Debug.Print("Create error : {0}", ex.Message);
-                        }
+
                     }
-                }
 
+                }
             }
 
-            if (result !=0){
+            if (result !=0 || result != 00){
 
                 Books book = new Books();
                 book.isbn = transactions.isbn;
