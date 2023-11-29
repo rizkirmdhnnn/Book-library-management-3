@@ -138,7 +138,7 @@ namespace Book_library_management_3.Models.Repository
             try
             {
                 // deklarasi perintah SQL
-                string sql = @"select * from transaction";
+                string sql = @"SELECT * FROM transaction";
                 // membuat objek command menggunakan blok using
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
                 {
@@ -175,12 +175,12 @@ namespace Book_library_management_3.Models.Repository
             try
             {
                 // deklarasi perintah SQL
-                string sql = @"select * from mahasiswa where username like @username";
+                string sql = @"SELECT * FROM transactions WHERE username = @username";
                 // membuat objek command menggunakan blok using
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
                 {
                     // mendaftarkan parameter dan mengeset nilainya
-                    cmd.Parameters.AddWithValue("@nama", string.Format("%{0}%", username));
+                    cmd.Parameters.AddWithValue("@username", username);
                     // membuat objek dtr (data reader) untuk menampung result set (hasil perintah SELECT)
                     using (SQLiteDataReader dtr = cmd.ExecuteReader())
                     {
