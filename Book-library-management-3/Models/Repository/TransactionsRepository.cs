@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Book_library_management_3.Models.Entity;
 using Book_library_management_3.Models.Context;
 using Book_library_management_3.Models.Repository;
+using System.Net.Configuration;
 
 
 namespace Book_library_management_3.Models.Repository
@@ -24,7 +25,6 @@ namespace Book_library_management_3.Models.Repository
         public int borrowingBook(Transactions transactions)
         {
             int result = 0;
-
             string sqlCheckUserBorrowing = @"SELECT username, isbn, date  FROM transactions WHERE username = @username AND isbn = @isbn AND status = 'Peminjaman'";
             string sqlInsert = @"INSERT INTO transactions (transaction_id, username, isbn, date, status) VALUES  (@transaction_id, @username, @isbn, @date, @status)";
             string sqlCheckStock = @"SELECT stocks FROM books WHERE isbn = @isbn";
@@ -207,5 +207,53 @@ namespace Book_library_management_3.Models.Repository
             return list;
         }
 
+        public List<Transactions> getBorrowingByUsername(string username)
+        {
+            List <Transactions> list = new List<Transactions>();
+
+            string sql = @"SELECT * FROM transactions WHERE username = @username";
+
+            using(SQLiteCommand cmd = new SQLiteCommand(sql,_connection))
+            {
+                cmd.Parameters.AddWithValue ("@username", username);
+
+                using(SQLiteDataReader dtr = cmd.ExecuteReader())
+                {
+                    while(dtr.Read())
+                    {
+                        Transactions trx = new Transactions();
+                        trx.transactions_id = (int)dtr["transaction_id"];
+                        trx.username = dtr["username"].ToString();
+                        trx.isbn = dtr["isbn"].ToString();
+                        trx.date = dtr["date"].ToString();
+                        trx.status = dtr["status"].ToString();
+                        list.Add(trx);
+                    }
+                }
+            }
+            return list;
         }
+
+        public int getTotalBorrowingBook()
+        {
+            int result = 0;
+
+            string sql = @"SELECT COUNT(*) FROM transactions WHERE status = 'Peminjaman'";
+
+            using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
+            {
+                try
+                {
+                    result = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.Print("Error: {0}. Query: {1}", ex.Message, cmd);
+                }
+            }
+
+            return result;
+        }
+
+    }
 }
