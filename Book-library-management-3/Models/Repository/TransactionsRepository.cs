@@ -103,7 +103,7 @@ namespace Book_library_management_3.Models.Repository
                 command.Parameters.AddWithValue("@username", transactions.username);
                 command.Parameters.AddWithValue("@isbn", transactions.isbn);
                 command.Parameters.AddWithValue("@date", DateTime.Now);
-                command.Parameters.AddWithValue("@status", "pengembalian");
+                command.Parameters.AddWithValue("@status", "Pengembalian");
 
                 try
                 {
