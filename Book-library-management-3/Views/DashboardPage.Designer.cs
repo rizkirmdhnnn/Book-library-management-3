@@ -32,7 +32,7 @@
             this.btn_logout = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.txt_logo = new System.Windows.Forms.Label();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dashboardPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_member = new Guna.UI2.WinForms.Guna2Button();
             this.btn_history = new Guna.UI2.WinForms.Guna2Button();
             this.btn_return = new Guna.UI2.WinForms.Guna2Button();
@@ -57,7 +57,8 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(194, 519);
+            this.guna2Panel1.ShadowDecoration.BorderRadius = 10;
+            this.guna2Panel1.Size = new System.Drawing.Size(194, 575);
             this.guna2Panel1.TabIndex = 0;
             // 
             // btn_logout
@@ -70,7 +71,7 @@
             this.btn_logout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.btn_logout.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.Location = new System.Drawing.Point(0, 474);
+            this.btn_logout.Location = new System.Drawing.Point(0, 530);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(194, 45);
             this.btn_logout.TabIndex = 7;
@@ -99,14 +100,14 @@
             this.txt_logo.TabIndex = 0;
             this.txt_logo.Text = "LOGO";
             // 
-            // guna2Panel2
+            // dashboardPanel
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(194, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(861, 519);
-            this.guna2Panel2.TabIndex = 1;
+            this.dashboardPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dashboardPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboardPanel.Location = new System.Drawing.Point(194, 0);
+            this.dashboardPanel.Name = "dashboardPanel";
+            this.dashboardPanel.Size = new System.Drawing.Size(861, 575);
+            this.dashboardPanel.TabIndex = 1;
             // 
             // btn_member
             // 
@@ -239,10 +240,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1055, 519);
-            this.Controls.Add(this.guna2Panel2);
+            this.ClientSize = new System.Drawing.Size(1055, 575);
+            this.Controls.Add(this.dashboardPanel);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "DashboardPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardPage";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
@@ -255,7 +257,7 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btn_dashboard;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel dashboardPanel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.Label txt_logo;
         private Guna.UI2.WinForms.Guna2Button btn_books;
