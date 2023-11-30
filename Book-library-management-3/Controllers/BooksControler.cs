@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using Book_library_management_3.Models.Entity;
 using Book_library_management_3.Models.Repository;
 using Book_library_management_3.Models.Context;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Book_library_management_3.Controllers
 {
@@ -65,5 +66,42 @@ namespace Book_library_management_3.Controllers
             return result;
         }
 
+        public int updateStocksBooks(Books  books, string IncreseOrDecrease)
+        {
+            int result = 0;
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new BooksRepository(context);
+                result = _repository.updateStocksBooks (books, IncreseOrDecrease);
+            }
+
+            return result;
+        }
+
+        public int deleteBook(Books books)
+        {
+            int result = 0;
+            using (DbContext context = new DbContext())
+            {
+                _repository = new BooksRepository(context);
+                result = _repository.deleteBook(books);
+
+            }
+            return result;
+        }
+
+        public int getTotalBook()
+        {
+            int result = 0;
+
+            using(DbContext context = new DbContext())
+            {
+                _repository = new BooksRepository(context);
+                result = _repository.getTotalBook();
+            }
+
+            return result;
+        }
     }
 }
