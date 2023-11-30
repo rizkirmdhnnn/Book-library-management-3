@@ -58,5 +58,92 @@ namespace Book_library_management_3.Controllers
 
             return result;
         }
+        
+        public int returnBook(Transactions transactions)
+        {
+            int result = 0;
+
+            if (transactions.transactions_id == default(int))
+            {
+                MessageBox.Show("TransactionID cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            if (string.IsNullOrEmpty(transactions.isbn))
+            {
+                MessageBox.Show("ISBN cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            if (string.IsNullOrEmpty(transactions.username))
+            {
+                MessageBox.Show("Username cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            if (string.IsNullOrEmpty(transactions.status))
+            {
+                MessageBox.Show("Status cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new transactionsRepository(context);
+                result = _repository.returnBook(transactions);
+            }
+
+            return result;
+        }
+    
+        public List<Transactions> getAllTransactions()
+        {
+            List<Transactions> list = new List<Transactions>();
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new transactionsRepository(context);
+                list = _repository.getAllTransactions();
+            }
+
+            return list;
+        }
+
+        public List<Transactions> getTransactionsByUsername(string username)
+        {
+            List<Transactions> list = new List<Transactions>();
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new transactionsRepository(context);
+                list = _repository.getTransactionByUsername(username);
+            }
+
+            return list;
+        }
+
+        public List<Transactions> getBorrowingByUsername(string username)
+        {
+            List<Transactions> list = new List<Transactions>();
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new transactionsRepository(context);
+                list = _repository.getBorrowingByUsername(username);
+            }
+
+            return list;
+        }
+
+        public int getTotalBorrowingBook()
+        {
+            int result = 0;
+            using(DbContext context = new DbContext())
+            {
+                _repository = new transactionsRepository(context);
+                result = _repository.getTotalBorrowingBook();
+            }
+            return result;
+        }
     }
 }
