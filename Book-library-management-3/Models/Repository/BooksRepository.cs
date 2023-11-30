@@ -106,5 +106,29 @@ namespace Book_library_management_3.Models.Repository
             return result;
         }
 
+        public int getTotalBook() { 
+            
+            int result = 0;
+
+            string sql = @"SELECT COUNT(*) FROM books";
+
+            using (SQLiteCommand command = new SQLiteCommand( sql, _connection))
+            {
+
+                try
+                {
+                    result = Convert.ToInt32(command.ExecuteScalar());
+
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.Print("Error: {0}. Query: {1}", ex.Message, command);
+
+                }
+            }
+            return result;
+
+        }
+
     }
 }
