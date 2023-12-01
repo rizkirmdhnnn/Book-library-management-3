@@ -138,5 +138,17 @@ namespace Book_library_management_3.Controllers
             return list;
         }
 
+        public int getTotalMembers()
+        {
+            int result = 0;
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new usersRepository(context);
+                result = _repository.getTotalMembers();
+            }
+
+            return result;
+        }
     }
 }
