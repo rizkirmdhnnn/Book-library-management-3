@@ -145,5 +145,17 @@ namespace Book_library_management_3.Controllers
             }
             return result;
         }
+        public int getTotalReturnedBook()
+        {
+            int result = 0;
+            using(DbContext context = new DbContext())
+            {
+                _repository = new transactionsRepository(context);
+                result = _repository.getTotalReturnedBook();
+            }
+            return result;
+        }
+
+
     }
 }
