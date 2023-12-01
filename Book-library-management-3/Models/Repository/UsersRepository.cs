@@ -131,5 +131,31 @@ namespace Book_library_management_3.Models.Repository
 
 
         }
+
+        public int getTotalMembers()
+        {
+
+            int result = 0;
+
+            string sql = @"SELECT COUNT(*) FROM users WHERE status = 'user'";
+
+            using (SQLiteCommand command = new SQLiteCommand(sql, _connection))
+            {
+
+                try
+                {
+                    result = Convert.ToInt32(command.ExecuteScalar());
+
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.Print("Error: {0}. Query: {1}", ex.Message, command);
+
+                }
+            }
+            return result;
+
+        }
+
     }
 }
