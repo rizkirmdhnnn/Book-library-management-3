@@ -255,5 +255,26 @@ namespace Book_library_management_3.Models.Repository
             return result;
         }
 
+        public int getTotalReturnedBook()
+        {
+            int result = 0;
+
+            string sql = @"SELECT COUNT(*) FROM transactions WHERE status = 'Pengembalian'";
+
+            using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
+            {
+                try
+                {
+                    result = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.Print("Error: {0}. Query: {1}", ex.Message, cmd);
+                }
+            }
+
+            return result;
+        }
+
     }
 }
