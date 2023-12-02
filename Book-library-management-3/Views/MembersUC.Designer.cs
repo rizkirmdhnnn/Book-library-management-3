@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lv_Members = new System.Windows.Forms.ListView();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.guna2ContextMenuStrip2 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.guna2ContextMenuStrip3 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
@@ -75,7 +75,7 @@
             this.label2.Font = new System.Drawing.Font("Montserrat", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(39, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 52);
+            this.label2.Size = new System.Drawing.Size(88, 65);
             this.label2.TabIndex = 20;
             this.label2.Text = "30";
             // 
@@ -85,7 +85,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(106, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 15);
+            this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 21;
             this.label3.Text = "Members";
             // 
@@ -111,15 +111,15 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(207, 36);
             this.guna2TextBox1.TabIndex = 17;
             // 
-            // listView1
+            // lv_Members
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(27, 94);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(806, 449);
-            this.listView1.TabIndex = 15;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.lv_Members.HideSelection = false;
+            this.lv_Members.Location = new System.Drawing.Point(27, 94);
+            this.lv_Members.Name = "lv_Members";
+            this.lv_Members.Size = new System.Drawing.Size(806, 449);
+            this.lv_Members.TabIndex = 15;
+            this.lv_Members.UseCompatibleStateImageBehavior = false;
+            this.lv_Members.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // guna2ContextMenuStrip1
             // 
@@ -168,9 +168,9 @@
             // 
             // MembersUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lv_Members);
             this.Controls.Add(this.guna2Panel9);
             this.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -187,7 +187,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lv_Members;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip2;
