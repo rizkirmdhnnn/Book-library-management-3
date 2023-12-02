@@ -34,5 +34,24 @@ namespace Book_library_management_3.Views
 
             if (result > 0) this.Hide();
         }
+
+        private void txtBox_username_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtBox_password.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txt_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_login.PerformClick();
+                e.SuppressKeyPress = true;
+            }
+        }
+
     }
 }
