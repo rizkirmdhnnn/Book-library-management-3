@@ -163,6 +163,16 @@ namespace Book_library_management_3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_PL {
+            get {
+                object obj = ResourceManager.GetObject("Logo PL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Members {
             get {
                 object obj = ResourceManager.GetObject("Members", resourceCulture);
