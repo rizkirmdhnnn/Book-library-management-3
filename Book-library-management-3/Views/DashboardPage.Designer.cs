@@ -30,17 +30,15 @@
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_logout = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txt_logo = new System.Windows.Forms.Label();
-            this.dashboardPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_member = new Guna.UI2.WinForms.Guna2Button();
             this.btn_history = new Guna.UI2.WinForms.Guna2Button();
             this.btn_return = new Guna.UI2.WinForms.Guna2Button();
             this.btn_transactions = new Guna.UI2.WinForms.Guna2Button();
             this.btn_books = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_dashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.dashboardPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -76,38 +74,6 @@
             this.btn_logout.Size = new System.Drawing.Size(194, 45);
             this.btn_logout.TabIndex = 7;
             this.btn_logout.Text = "Logout";
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel3.Controls.Add(this.txt_logo);
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(194, 115);
-            this.guna2Panel3.TabIndex = 1;
-            // 
-            // txt_logo
-            // 
-            this.txt_logo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_logo.AutoSize = true;
-            this.txt_logo.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_logo.Location = new System.Drawing.Point(66, 45);
-            this.txt_logo.Name = "txt_logo";
-            this.txt_logo.Size = new System.Drawing.Size(70, 26);
-            this.txt_logo.TabIndex = 0;
-            this.txt_logo.Text = "LOGO";
-            // 
-            // dashboardPanel
-            // 
-            this.dashboardPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dashboardPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashboardPanel.Location = new System.Drawing.Point(194, 0);
-            this.dashboardPanel.Name = "dashboardPanel";
-            this.dashboardPanel.Size = new System.Drawing.Size(861, 575);
-            this.dashboardPanel.TabIndex = 1;
             // 
             // btn_member
             // 
@@ -215,6 +181,15 @@
             this.btn_books.TextOffset = new System.Drawing.Point(25, 0);
             this.btn_books.Click += new System.EventHandler(this.btn_books_Click);
             // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(194, 115);
+            this.guna2Panel3.TabIndex = 1;
+            // 
             // btn_dashboard
             // 
             this.btn_dashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -236,6 +211,15 @@
             this.btn_dashboard.TextOffset = new System.Drawing.Point(25, 0);
             this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
             // 
+            // dashboardPanel
+            // 
+            this.dashboardPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dashboardPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboardPanel.Location = new System.Drawing.Point(194, 0);
+            this.dashboardPanel.Name = "dashboardPanel";
+            this.dashboardPanel.Size = new System.Drawing.Size(861, 575);
+            this.dashboardPanel.TabIndex = 1;
+            // 
             // DashboardPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,8 +231,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardPage";
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -259,7 +241,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_dashboard;
         private Guna.UI2.WinForms.Guna2Panel dashboardPanel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.Label txt_logo;
         private Guna.UI2.WinForms.Guna2Button btn_books;
         private Guna.UI2.WinForms.Guna2Button btn_logout;
         private Guna.UI2.WinForms.Guna2Button btn_member;

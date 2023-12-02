@@ -28,10 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
+            this.SuspendLayout();
+            // 
+            // guna2Panel9
+            // 
+            this.guna2Panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel9.FillColor = System.Drawing.Color.White;
+            this.guna2Panel9.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel9.Name = "guna2Panel9";
+            this.guna2Panel9.ShadowDecoration.Color = System.Drawing.Color.Gainsboro;
+            this.guna2Panel9.ShadowDecoration.Enabled = true;
+            this.guna2Panel9.Size = new System.Drawing.Size(863, 63);
+            this.guna2Panel9.TabIndex = 13;
+            // 
+            // TransactionsUC
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.guna2Panel9);
+            this.Name = "TransactionsUC";
+            this.Size = new System.Drawing.Size(863, 453);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
     }
 }

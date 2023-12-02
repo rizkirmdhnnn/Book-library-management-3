@@ -66,16 +66,16 @@
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lv_RecentBooks = new System.Windows.Forms.ListView();
+            this.lv_RecentMembers = new System.Windows.Forms.ListView();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
             this.guna2Panel11.SuspendLayout();
@@ -273,13 +273,16 @@
             // 
             // txt_totalBook
             // 
-            this.txt_totalBook.AutoSize = true;
+            this.txt_totalBook.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_totalBook.Font = new System.Drawing.Font("Montserrat", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_totalBook.Location = new System.Drawing.Point(50, 62);
             this.txt_totalBook.Name = "txt_totalBook";
             this.txt_totalBook.Size = new System.Drawing.Size(68, 37);
             this.txt_totalBook.TabIndex = 8;
             this.txt_totalBook.Text = "345";
+            this.txt_totalBook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2PictureBox1
             // 
@@ -303,13 +306,16 @@
             // 
             // txt_members
             // 
-            this.txt_members.AutoSize = true;
+            this.txt_members.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_members.Font = new System.Drawing.Font("Montserrat", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_members.Location = new System.Drawing.Point(51, 62);
             this.txt_members.Name = "txt_members";
             this.txt_members.Size = new System.Drawing.Size(67, 37);
             this.txt_members.TabIndex = 8;
             this.txt_members.Text = "567";
+            this.txt_members.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2PictureBox2
             // 
@@ -441,13 +447,16 @@
             // 
             // txt_borrowing
             // 
-            this.txt_borrowing.AutoSize = true;
+            this.txt_borrowing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_borrowing.Font = new System.Drawing.Font("Montserrat", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_borrowing.Location = new System.Drawing.Point(56, 62);
             this.txt_borrowing.Name = "txt_borrowing";
             this.txt_borrowing.Size = new System.Drawing.Size(52, 37);
             this.txt_borrowing.TabIndex = 8;
             this.txt_borrowing.Text = "24";
+            this.txt_borrowing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2PictureBox3
             // 
@@ -525,13 +534,16 @@
             // 
             // txt_returned
             // 
-            this.txt_returned.AutoSize = true;
+            this.txt_returned.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_returned.Font = new System.Drawing.Font("Montserrat", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_returned.Location = new System.Drawing.Point(52, 62);
             this.txt_returned.Name = "txt_returned";
             this.txt_returned.Size = new System.Drawing.Size(64, 37);
             this.txt_returned.TabIndex = 8;
             this.txt_returned.Text = "100";
+            this.txt_returned.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2PictureBox4
             // 
@@ -557,21 +569,13 @@
             // 
             this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel5.BorderRadius = 10;
-            this.guna2Panel5.Controls.Add(this.listBox1);
+            this.guna2Panel5.Controls.Add(this.lv_RecentBooks);
             this.guna2Panel5.Controls.Add(this.guna2Panel8);
             this.guna2Panel5.FillColor = System.Drawing.Color.White;
             this.guna2Panel5.Location = new System.Drawing.Point(38, 254);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(371, 225);
             this.guna2Panel5.TabIndex = 9;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(13, 62);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(345, 147);
-            this.listBox1.TabIndex = 12;
             // 
             // guna2Panel8
             // 
@@ -613,21 +617,13 @@
             // 
             this.guna2Panel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel6.BorderRadius = 10;
-            this.guna2Panel6.Controls.Add(this.listBox2);
+            this.guna2Panel6.Controls.Add(this.lv_RecentMembers);
             this.guna2Panel6.Controls.Add(this.guna2Panel7);
             this.guna2Panel6.FillColor = System.Drawing.Color.White;
             this.guna2Panel6.Location = new System.Drawing.Point(444, 254);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(371, 225);
             this.guna2Panel6.TabIndex = 10;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(13, 62);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(345, 147);
-            this.listBox2.TabIndex = 13;
             // 
             // guna2Panel7
             // 
@@ -674,6 +670,24 @@
             this.guna2Panel9.ShadowDecoration.Enabled = true;
             this.guna2Panel9.Size = new System.Drawing.Size(864, 63);
             this.guna2Panel9.TabIndex = 12;
+            // 
+            // lv_RecentBooks
+            // 
+            this.lv_RecentBooks.HideSelection = false;
+            this.lv_RecentBooks.Location = new System.Drawing.Point(13, 55);
+            this.lv_RecentBooks.Name = "lv_RecentBooks";
+            this.lv_RecentBooks.Size = new System.Drawing.Size(345, 159);
+            this.lv_RecentBooks.TabIndex = 12;
+            this.lv_RecentBooks.UseCompatibleStateImageBehavior = false;
+            // 
+            // lv_RecentMembers
+            // 
+            this.lv_RecentMembers.HideSelection = false;
+            this.lv_RecentMembers.Location = new System.Drawing.Point(13, 55);
+            this.lv_RecentMembers.Name = "lv_RecentMembers";
+            this.lv_RecentMembers.Size = new System.Drawing.Size(345, 159);
+            this.lv_RecentMembers.TabIndex = 13;
+            this.lv_RecentMembers.UseCompatibleStateImageBehavior = false;
             // 
             // DashboardUC
             // 
@@ -759,8 +773,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
@@ -782,5 +794,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel16;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox13;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ListView lv_RecentBooks;
+        private System.Windows.Forms.ListView lv_RecentMembers;
     }
 }
