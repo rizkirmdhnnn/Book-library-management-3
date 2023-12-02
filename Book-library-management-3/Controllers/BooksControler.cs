@@ -103,5 +103,18 @@ namespace Book_library_management_3.Controllers
 
             return result;
         }
+
+        public List<Books> getRecentBooks()
+        {
+            List<Books> list = new List<Books>();
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new BooksRepository(context);
+                list = _repository.getRecentBooks();
+            }
+
+            return list;
+        }
     }
 }

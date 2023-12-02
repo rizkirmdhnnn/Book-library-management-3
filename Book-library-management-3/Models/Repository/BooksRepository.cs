@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SQLite;
 using Book_library_management_3.Models.Context;
 using Book_library_management_3.Models.Entity;
+using System.Windows.Forms;
 
 namespace Book_library_management_3.Models.Repository
 {
@@ -127,6 +128,35 @@ namespace Book_library_management_3.Models.Repository
                 }
             }
             return result;
+
+        }
+
+        public List<Books> getRecentBooks()
+        {
+            List<Books> list = new List<Books>();
+            try
+            {
+                string sql = @"SELECT title, stocks FROM ( SELECT title, stocks, ROW_NUMBER() OVER () AS row_num FROM books) AS user_with_rownum WHERE user_with_rownum.row_num > (SELECT COUNT(*) FROM books) - 7";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
+                {
+                    using (SQLiteDataReader dtr = cmd.ExecuteReader())
+                    {
+                        while (dtr.Read())
+                        {
+                            Books books = new Books();
+                            books.title  = dtr["title"].ToString();
+                            books.stocks = Convert.ToInt32(dtr["stocks"]); 
+                            list.Add(books);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print("getRecentMembers error: {0}", ex.Message);
+            }
+            return list;
 
         }
 
