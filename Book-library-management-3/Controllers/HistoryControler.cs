@@ -26,20 +26,5 @@ namespace Book_library_management_3.Controllers
 
             return list;
         }
-    
-        public List<History> getHistoryByUsername()
-        {
-            List<History> list = new List<History>();
-
-            using(DbContext context = new DbContext())
-            {
-                _repository = new HistoryRepository(context);
-                
-                list = _repository.getHistoryByUsername();
-            }
-
-            return list;
-        }
-
     }
 }

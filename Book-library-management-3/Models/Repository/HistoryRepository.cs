@@ -28,13 +28,16 @@ namespace Book_library_management_3.Models.Repository
                 string sql = @"select * from history";
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
                 {
+                    // membuat objek dtr (data reader) untuk menampung result  (hasil perintah SELECT)
                     using (SQLiteDataReader dtr = cmd.ExecuteReader())
                     {
+                        // panggil method Read untuk mendapatkan baris dari set
                         while (dtr.Read())
                         {
+                            // proses konversi dari row result set ke object
                             History histoy = new History();
-                            histoy.history_id = Convert.ToInt32(dtr["history_id"]);
-                            histoy.transactions_id = Convert.ToInt32(dtr["transaction_id"]);
+                            histoy.history_id = (int)dtr["history_id"];
+                            histoy.transactions_id = (int)dtr["transaction_id"];
                             histoy.username = dtr["username"].ToString();
                             histoy.isbn = dtr["isbn"].ToString();
                             histoy.date = dtr["date"].ToString();
@@ -55,36 +58,5 @@ namespace Book_library_management_3.Models.Repository
 
         }
 
-        public List<History> getHistoryByUsername() { 
-        
-            List<History> list = new List<History>();
-            string sql = @"SELECT * FROM history WHERE username = @username";
-            try
-            {
-                using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
-                {
-                    using (SQLiteDataReader dtr = cmd.ExecuteReader())
-                    {
-                        while (dtr.Read())
-                        {
-                            History histoy = new History();
-                            histoy.history_id = Convert.ToInt32(dtr["history_id"]);
-                            histoy.transactions_id = Convert.ToInt32(dtr["transaction_id"]);
-                            histoy.username = dtr["username"].ToString();
-                            histoy.isbn = dtr["isbn"].ToString();
-                            histoy.date = dtr["date"].ToString();
-                            histoy.status = dtr["status"].ToString();
-                            list.Add(histoy);
-                        }
-                    }
-                }
-            } catch (Exception ex)
-            {
-                System.Diagnostics.Debug.Print("getAllTransactions error: {0}", ex.Message);
-            }
-
-            return list;
-        
-        }
     }
 }
