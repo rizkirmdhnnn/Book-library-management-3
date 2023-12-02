@@ -60,5 +60,27 @@ namespace Book_library_management_3.Views
             lv_History.Columns.Add("Status", 180, HorizontalAlignment.Left);
         }
 
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            lv_History.Items.Clear();
+
+            History his = new History();
+            his.username = txtbox_username.Text;
+
+            histories = _historyControler.getHistoryByUsername(his);
+
+            foreach (History history in histories)
+            {
+                var item = new ListViewItem();
+                item.SubItems.Add(history.history_id.ToString());
+                item.SubItems.Add(history.transactions_id.ToString());
+                item.SubItems.Add(history.username);
+                item.SubItems.Add(history.title);
+                item.SubItems.Add(history.date);
+                item.SubItems.Add(history.status);
+                lv_History.Items.Add(item);
+
+            }
+        }
     }
 }
