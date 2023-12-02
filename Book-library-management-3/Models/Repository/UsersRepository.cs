@@ -157,5 +157,34 @@ namespace Book_library_management_3.Models.Repository
 
         }
 
+        public List<Users> getRecentMembers()
+        {
+
+            List<Users> list = new List<Users>();
+            try
+            {
+                string sql = @"SELECT username, status FROM ( SELECT username, status, ROW_NUMBER() OVER () AS row_num FROM users) AS user_with_rownum WHERE user_with_rownum.row_num > (SELECT COUNT(*) FROM users) - 7";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
+                {
+                    using (SQLiteDataReader dtr = cmd.ExecuteReader())
+                    {
+                        while (dtr.Read())
+                        {
+                            Users user = new Users();
+                            user.username = dtr["username"].ToString();
+                            user.status = dtr["status"].ToString();
+                            list.Add(user);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print("getRecentMembers error: {0}", ex.Message);
+            }
+            return list;
+
+        }
     }
 }

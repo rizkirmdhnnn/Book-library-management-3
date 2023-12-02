@@ -150,5 +150,18 @@ namespace Book_library_management_3.Controllers
 
             return result;
         }
+
+        public List<Users> getRecentMembers()
+        {
+            List<Users> list = new List<Users>();
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new usersRepository(context);
+                list = _repository.getRecentMembers();
+            }
+
+            return list;
+        }
     }
 }
