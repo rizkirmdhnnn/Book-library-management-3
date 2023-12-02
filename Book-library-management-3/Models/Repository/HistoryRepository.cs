@@ -4,6 +4,7 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Book_library_management_3.Models.Context;
 using Book_library_management_3.Models.Entity;
 
@@ -25,7 +26,7 @@ namespace Book_library_management_3.Models.Repository
             List<History> list = new List<History>();
             try
             {
-                string sql = @"select * from history";
+                string sql = @"SELECT history_id, transaction_id, username, books.title,date,status FROM history JOIN books ON history.isbn = books.isbn";
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
                 {
                     // membuat objek dtr (data reader) untuk menampung result  (hasil perintah SELECT)
@@ -36,10 +37,10 @@ namespace Book_library_management_3.Models.Repository
                         {
                             // proses konversi dari row result set ke object
                             History histoy = new History();
-                            histoy.history_id = (int)dtr["history_id"];
-                            histoy.transactions_id = (int)dtr["transaction_id"];
+                            histoy.history_id = Convert.ToInt32(dtr["history_id"]);
+                            histoy.transactions_id = Convert.ToInt32(dtr["transaction_id"]);
                             histoy.username = dtr["username"].ToString();
-                            histoy.isbn = dtr["isbn"].ToString();
+                            histoy.title = dtr["title"].ToString();
                             histoy.date = dtr["date"].ToString();
                             histoy.status = dtr["status"].ToString();
                             list.Add(histoy);

@@ -11,7 +11,7 @@ namespace Book_library_management_3.Models.Entity
         public int history_id { get; set; }
         public int transactions_id { get; set; }
         public string username { get; set; }
-        public string isbn { get; set; }
+        public string title { get; set; }
         public string date { get; set; }
         public string status { get; set; }
     }
