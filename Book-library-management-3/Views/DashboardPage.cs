@@ -177,5 +177,12 @@ namespace Book_library_management_3.Views
             MembersUC membersUC= new MembersUC();
             addUserControl(membersUC);
         }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+        }
     }
 }
