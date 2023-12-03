@@ -30,15 +30,15 @@
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_logout = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.dashboardPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_member = new Guna.UI2.WinForms.Guna2Button();
             this.btn_history = new Guna.UI2.WinForms.Guna2Button();
             this.btn_return = new Guna.UI2.WinForms.Guna2Button();
             this.btn_transactions = new Guna.UI2.WinForms.Guna2Button();
             this.btn_books = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_dashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.dashboardPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -77,25 +77,7 @@
             this.btn_logout.Size = new System.Drawing.Size(194, 45);
             this.btn_logout.TabIndex = 7;
             this.btn_logout.Text = "Logout";
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel3.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(194, 115);
-            this.guna2Panel3.TabIndex = 1;
-            // 
-            // dashboardPanel
-            // 
-            this.dashboardPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dashboardPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashboardPanel.Location = new System.Drawing.Point(194, 0);
-            this.dashboardPanel.Name = "dashboardPanel";
-            this.dashboardPanel.Size = new System.Drawing.Size(861, 575);
-            this.dashboardPanel.TabIndex = 1;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // btn_member
             // 
@@ -203,6 +185,16 @@
             this.btn_books.TextOffset = new System.Drawing.Point(25, 0);
             this.btn_books.Click += new System.EventHandler(this.btn_books_Click);
             // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel3.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(194, 115);
+            this.guna2Panel3.TabIndex = 1;
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::Book_library_management_3.Properties.Resources.Logo_PL_Transparant;
@@ -234,6 +226,15 @@
             this.btn_dashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_dashboard.TextOffset = new System.Drawing.Point(25, 0);
             this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
+            // 
+            // dashboardPanel
+            // 
+            this.dashboardPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dashboardPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboardPanel.Location = new System.Drawing.Point(194, 0);
+            this.dashboardPanel.Name = "dashboardPanel";
+            this.dashboardPanel.Size = new System.Drawing.Size(861, 575);
+            this.dashboardPanel.TabIndex = 1;
             // 
             // DashboardPage
             // 

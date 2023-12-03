@@ -66,16 +66,16 @@
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lv_RecentBooks = new System.Windows.Forms.ListView();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lv_RecentMembers = new System.Windows.Forms.ListView();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lv_RecentBooks = new System.Windows.Forms.ListView();
-            this.lv_RecentMembers = new System.Windows.Forms.ListView();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
             this.guna2Panel11.SuspendLayout();
@@ -108,6 +108,7 @@
             // 
             // guna2Panel3
             // 
+            this.guna2Panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel3.BorderRadius = 10;
             this.guna2Panel3.Controls.Add(this.guna2Panel10);
@@ -339,6 +340,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 10;
             this.guna2Panel1.Controls.Add(this.guna2Panel14);
@@ -393,6 +395,7 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BorderRadius = 10;
             this.guna2Panel2.Controls.Add(this.guna2Panel15);
@@ -480,6 +483,7 @@
             // 
             // guna2Panel4
             // 
+            this.guna2Panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.BorderRadius = 10;
             this.guna2Panel4.Controls.Add(this.guna2Panel16);
@@ -567,6 +571,7 @@
             // 
             // guna2Panel5
             // 
+            this.guna2Panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel5.BorderRadius = 10;
             this.guna2Panel5.Controls.Add(this.lv_RecentBooks);
@@ -576,6 +581,15 @@
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(371, 225);
             this.guna2Panel5.TabIndex = 9;
+            // 
+            // lv_RecentBooks
+            // 
+            this.lv_RecentBooks.HideSelection = false;
+            this.lv_RecentBooks.Location = new System.Drawing.Point(13, 55);
+            this.lv_RecentBooks.Name = "lv_RecentBooks";
+            this.lv_RecentBooks.Size = new System.Drawing.Size(345, 159);
+            this.lv_RecentBooks.TabIndex = 12;
+            this.lv_RecentBooks.UseCompatibleStateImageBehavior = false;
             // 
             // guna2Panel8
             // 
@@ -615,6 +629,7 @@
             // 
             // guna2Panel6
             // 
+            this.guna2Panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Panel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel6.BorderRadius = 10;
             this.guna2Panel6.Controls.Add(this.lv_RecentMembers);
@@ -624,6 +639,15 @@
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(371, 225);
             this.guna2Panel6.TabIndex = 10;
+            // 
+            // lv_RecentMembers
+            // 
+            this.lv_RecentMembers.HideSelection = false;
+            this.lv_RecentMembers.Location = new System.Drawing.Point(13, 55);
+            this.lv_RecentMembers.Name = "lv_RecentMembers";
+            this.lv_RecentMembers.Size = new System.Drawing.Size(345, 159);
+            this.lv_RecentMembers.TabIndex = 13;
+            this.lv_RecentMembers.UseCompatibleStateImageBehavior = false;
             // 
             // guna2Panel7
             // 
@@ -663,6 +687,7 @@
             // 
             // guna2Panel9
             // 
+            this.guna2Panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel9.FillColor = System.Drawing.Color.White;
             this.guna2Panel9.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel9.Name = "guna2Panel9";
@@ -670,24 +695,6 @@
             this.guna2Panel9.ShadowDecoration.Enabled = true;
             this.guna2Panel9.Size = new System.Drawing.Size(864, 63);
             this.guna2Panel9.TabIndex = 12;
-            // 
-            // lv_RecentBooks
-            // 
-            this.lv_RecentBooks.HideSelection = false;
-            this.lv_RecentBooks.Location = new System.Drawing.Point(13, 55);
-            this.lv_RecentBooks.Name = "lv_RecentBooks";
-            this.lv_RecentBooks.Size = new System.Drawing.Size(345, 159);
-            this.lv_RecentBooks.TabIndex = 12;
-            this.lv_RecentBooks.UseCompatibleStateImageBehavior = false;
-            // 
-            // lv_RecentMembers
-            // 
-            this.lv_RecentMembers.HideSelection = false;
-            this.lv_RecentMembers.Location = new System.Drawing.Point(13, 55);
-            this.lv_RecentMembers.Name = "lv_RecentMembers";
-            this.lv_RecentMembers.Size = new System.Drawing.Size(345, 159);
-            this.lv_RecentMembers.TabIndex = 13;
-            this.lv_RecentMembers.UseCompatibleStateImageBehavior = false;
             // 
             // DashboardUC
             // 
