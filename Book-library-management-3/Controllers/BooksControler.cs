@@ -116,5 +116,31 @@ namespace Book_library_management_3.Controllers
 
             return list;
         }
+
+        public List<Books> getAllBooks()
+        {
+            List<Books> list = new List<Books>();
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new BooksRepository(context);
+                list = _repository.getAllBooks();
+            }
+
+            return list;
+        }
+
+        public List<Books> getBookByTitle(Books getTitleBook)
+        {
+            List<Books> list = new List<Books>();
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new BooksRepository(context);
+                list = _repository.getBookByTitle(getTitleBook);
+            }
+
+            return list;
+        }
     }
 }

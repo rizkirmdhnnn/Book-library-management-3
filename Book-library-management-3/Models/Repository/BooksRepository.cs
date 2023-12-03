@@ -7,6 +7,7 @@ using System.Data.SQLite;
 using Book_library_management_3.Models.Context;
 using Book_library_management_3.Models.Entity;
 using System.Windows.Forms;
+using Book_library_management_3.Views;
 
 namespace Book_library_management_3.Models.Repository
 {
@@ -160,5 +161,70 @@ namespace Book_library_management_3.Models.Repository
 
         }
 
+        public List<Books> getAllBooks()
+        {
+            List<Books> list = new List<Books>();
+            string sql = @"SELECT * FROM books";
+            try
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
+                {
+                    using (SQLiteDataReader dtr = cmd.ExecuteReader())
+                    {
+                        while (dtr.Read())
+                        {
+                            Books books = new Books();
+                            books.isbn = dtr["isbn"].ToString();
+                            books.title = dtr["title"].ToString();
+                            books.writter = dtr["writter"].ToString();
+                            books.genre = dtr["genre"].ToString();
+                            books.publisher = dtr["publisher"].ToString();
+                            books.stocks = Convert.ToInt32(dtr["stocks"]);
+                            list.Add(books);
+                        }
+                    }
+                }
+            } catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print("getRecentMembers error: {0}", ex.Message);
+
+            }
+
+            return list;
+        }
+
+        public List<Books> getBookByTitle(Books getTitleBook)
+        {
+            List<Books> list = new List<Books>();
+            string sql = @"SELECT * FROM books WHERE title LIKE @title";
+            try
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
+                {
+                    cmd.Parameters.AddWithValue("@title", getTitleBook.title + '%');
+                    using (SQLiteDataReader dtr = cmd.ExecuteReader())
+                    {
+                        while (dtr.Read())
+                        {
+                            Books books = new Books();
+                            books.isbn = dtr["isbn"].ToString();
+                            books.title = dtr["title"].ToString();
+                            books.writter = dtr["writter"].ToString();
+                            books.genre = dtr["genre"].ToString();
+                            books.publisher = dtr["publisher"].ToString();
+                            books.stocks = Convert.ToInt32(dtr["stocks"]);
+                            list.Add(books);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print("getRecentMembers error: {0}", ex.Message);
+
+            }
+
+            return list;
+        }
     }
 }
