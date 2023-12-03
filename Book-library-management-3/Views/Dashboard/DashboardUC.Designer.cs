@@ -579,7 +579,7 @@
             this.guna2Panel5.FillColor = System.Drawing.Color.White;
             this.guna2Panel5.Location = new System.Drawing.Point(38, 254);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(371, 225);
+            this.guna2Panel5.Size = new System.Drawing.Size(371, 229);
             this.guna2Panel5.TabIndex = 9;
             // 
             // lv_RecentBooks
@@ -588,7 +588,7 @@
             this.lv_RecentBooks.HideSelection = false;
             this.lv_RecentBooks.Location = new System.Drawing.Point(13, 55);
             this.lv_RecentBooks.Name = "lv_RecentBooks";
-            this.lv_RecentBooks.Size = new System.Drawing.Size(345, 159);
+            this.lv_RecentBooks.Size = new System.Drawing.Size(345, 161);
             this.lv_RecentBooks.TabIndex = 12;
             this.lv_RecentBooks.UseCompatibleStateImageBehavior = false;
             // 
@@ -638,7 +638,7 @@
             this.guna2Panel6.FillColor = System.Drawing.Color.White;
             this.guna2Panel6.Location = new System.Drawing.Point(444, 254);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(371, 225);
+            this.guna2Panel6.Size = new System.Drawing.Size(371, 229);
             this.guna2Panel6.TabIndex = 10;
             // 
             // lv_RecentMembers
@@ -647,7 +647,7 @@
             this.lv_RecentMembers.HideSelection = false;
             this.lv_RecentMembers.Location = new System.Drawing.Point(13, 55);
             this.lv_RecentMembers.Name = "lv_RecentMembers";
-            this.lv_RecentMembers.Size = new System.Drawing.Size(345, 159);
+            this.lv_RecentMembers.Size = new System.Drawing.Size(345, 161);
             this.lv_RecentMembers.TabIndex = 13;
             this.lv_RecentMembers.UseCompatibleStateImageBehavior = false;
             // 
