@@ -584,6 +584,7 @@
             // 
             // lv_RecentBooks
             // 
+            this.lv_RecentBooks.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_RecentBooks.HideSelection = false;
             this.lv_RecentBooks.Location = new System.Drawing.Point(13, 55);
             this.lv_RecentBooks.Name = "lv_RecentBooks";
@@ -642,6 +643,7 @@
             // 
             // lv_RecentMembers
             // 
+            this.lv_RecentMembers.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_RecentMembers.HideSelection = false;
             this.lv_RecentMembers.Location = new System.Drawing.Point(13, 55);
             this.lv_RecentMembers.Name = "lv_RecentMembers";

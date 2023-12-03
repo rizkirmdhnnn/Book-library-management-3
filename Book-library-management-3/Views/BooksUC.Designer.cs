@@ -178,6 +178,7 @@
             // 
             // lv_Books
             // 
+            this.lv_Books.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_Books.HideSelection = false;
             this.lv_Books.Location = new System.Drawing.Point(29, 83);
             this.lv_Books.Name = "lv_Books";
