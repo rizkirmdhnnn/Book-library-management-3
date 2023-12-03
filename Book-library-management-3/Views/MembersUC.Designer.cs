@@ -32,19 +32,23 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
             this.txtbox_username = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_total = new System.Windows.Forms.Label();
+            this.txt_members = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lv_Members = new System.Windows.Forms.ListView();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_admin = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel9.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel9
             // 
+            this.guna2Panel9.Controls.Add(this.txt_admin);
+            this.guna2Panel9.Controls.Add(this.label3);
             this.guna2Panel9.Controls.Add(this.guna2Panel1);
-            this.guna2Panel9.Controls.Add(this.txt_total);
+            this.guna2Panel9.Controls.Add(this.txt_members);
             this.guna2Panel9.Controls.Add(this.label2);
             this.guna2Panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel9.FillColor = System.Drawing.Color.White;
@@ -104,34 +108,35 @@
             this.txtbox_username.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtbox_username.Name = "txtbox_username";
             this.txtbox_username.PasswordChar = '\0';
-            this.txtbox_username.PlaceholderText = "Search";
+            this.txtbox_username.PlaceholderText = "Search by username";
             this.txtbox_username.SelectedText = "";
             this.txtbox_username.Size = new System.Drawing.Size(202, 32);
             this.txtbox_username.TabIndex = 2;
+            this.txtbox_username.TextChanged += new System.EventHandler(this.txtbox_username_TextChanged);
             // 
-            // txt_total
+            // txt_members
             // 
-            this.txt_total.AutoSize = true;
-            this.txt_total.BackColor = System.Drawing.Color.Transparent;
-            this.txt_total.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total.Location = new System.Drawing.Point(21, 6);
-            this.txt_total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txt_total.Name = "txt_total";
-            this.txt_total.Size = new System.Drawing.Size(54, 44);
-            this.txt_total.TabIndex = 11;
-            this.txt_total.Text = "10";
+            this.txt_members.AutoSize = true;
+            this.txt_members.BackColor = System.Drawing.Color.Transparent;
+            this.txt_members.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_members.Location = new System.Drawing.Point(21, 8);
+            this.txt_members.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txt_members.Name = "txt_members";
+            this.txt_members.Size = new System.Drawing.Size(54, 44);
+            this.txt_members.TabIndex = 11;
+            this.txt_members.Text = "10";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(74, 20);
+            this.label2.Location = new System.Drawing.Point(74, 22);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 21);
+            this.label2.Size = new System.Drawing.Size(81, 21);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Total Members";
+            this.label2.Text = "Members";
             // 
             // lv_Members
             // 
@@ -184,6 +189,30 @@
             this.guna2Button1.Text = "Edit Data";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // txt_admin
+            // 
+            this.txt_admin.AutoSize = true;
+            this.txt_admin.BackColor = System.Drawing.Color.Transparent;
+            this.txt_admin.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_admin.Location = new System.Drawing.Point(199, 8);
+            this.txt_admin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txt_admin.Name = "txt_admin";
+            this.txt_admin.Size = new System.Drawing.Size(54, 44);
+            this.txt_admin.TabIndex = 15;
+            this.txt_admin.Text = "10";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(252, 22);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 21);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Admin";
+            // 
             // MembersUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -205,7 +234,7 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
-        private System.Windows.Forms.Label txt_total;
+        private System.Windows.Forms.Label txt_members;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btn_add;
@@ -213,5 +242,7 @@
         private System.Windows.Forms.ListView lv_Members;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Label txt_admin;
+        private System.Windows.Forms.Label label3;
     }
 }

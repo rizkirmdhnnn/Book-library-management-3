@@ -151,6 +151,19 @@ namespace Book_library_management_3.Controllers
             return result;
         }
 
+        public int getTotalAdmin()
+        {
+            int result = 0;
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new usersRepository(context);
+                result = _repository.getTotalAdmin();
+            }
+
+            return result;
+        }
+
         public List<Users> getRecentMembers()
         {
             List<Users> list = new List<Users>();
@@ -159,6 +172,19 @@ namespace Book_library_management_3.Controllers
             {
                 _repository = new usersRepository(context);
                 list = _repository.getRecentMembers();
+            }
+
+            return list;
+        }
+
+        public List<Users> getByUsername(Users users)
+        {
+            List<Users> list = new List<Users>();
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new usersRepository(context);
+                list = _repository.getByUsername(users);
             }
 
             return list;

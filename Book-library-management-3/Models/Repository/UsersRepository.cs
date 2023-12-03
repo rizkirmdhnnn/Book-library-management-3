@@ -72,7 +72,7 @@ namespace Book_library_management_3.Models.Repository
             List<Users> list = new List<Users>();
             try
             {
-                string sql = @"select * from users where status='user'";
+                string sql = @"select * from users ";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
                 {
@@ -85,6 +85,7 @@ namespace Book_library_management_3.Models.Repository
                             user.password = dtr["password"].ToString();
                             user.name = dtr["name"].ToString();
                             user.email = dtr["email"].ToString();
+                            user.status = dtr["status"].ToString();
                             user.date_register = dtr["date_register"].ToString();
                             list.Add(user);
                         }
@@ -154,6 +155,65 @@ namespace Book_library_management_3.Models.Repository
                 }
             }
             return result;
+
+        }
+        public int getTotalAdmin()
+        {
+
+            int result = 0;
+
+            string sql = @"SELECT COUNT(*) FROM users WHERE status = 'admin'";
+
+            using (SQLiteCommand command = new SQLiteCommand(sql, _connection))
+            {
+
+                try
+                {
+                    result = Convert.ToInt32(command.ExecuteScalar());
+
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.Print("Error: {0}. Query: {1}", ex.Message, command);
+
+                }
+            }
+            return result;
+
+        }
+
+        public List<Users> getByUsername(Users users)
+        {
+            List<Users> list = new List<Users>();
+            try
+            {
+                string sql = @"SELECT * FROM users WHERE username LIKE @username";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
+                {
+                    cmd.Parameters.AddWithValue("@username", "%" + users.username + "%");
+                    using (SQLiteDataReader dtr = cmd.ExecuteReader())
+                    {
+                        while (dtr.Read())
+                        {
+                            Users user = new Users();
+                            user.username = dtr["username"].ToString();
+                            user.password = dtr["password"].ToString();
+                            user.name = dtr["name"].ToString();
+                            user.email = dtr["email"].ToString();
+                            user.status = dtr["status"].ToString();
+                            user.date_register = dtr["date_register"].ToString();
+                            list.Add(user);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print("getAllTransactions error: {0}", ex.Message);
+            }
+            return list;
+
 
         }
 
