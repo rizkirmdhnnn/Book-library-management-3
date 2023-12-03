@@ -54,10 +54,10 @@ namespace Book_library_management_3.Views
             lv_History.Columns.Add("", 0, HorizontalAlignment.Right);
             lv_History.Columns.Add("Histoy ID", 100, HorizontalAlignment.Left);
             lv_History.Columns.Add("Transaction ID", 100, HorizontalAlignment.Left);
-            lv_History.Columns.Add("Username", 110, HorizontalAlignment.Left);
+            lv_History.Columns.Add("Username", 125, HorizontalAlignment.Left);
             lv_History.Columns.Add("Title Book", 210, HorizontalAlignment.Left);
             lv_History.Columns.Add("Date", 110, HorizontalAlignment.Left);
-            lv_History.Columns.Add("Status", 180, HorizontalAlignment.Left);
+            lv_History.Columns.Add("Status", 145, HorizontalAlignment.Left);
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)

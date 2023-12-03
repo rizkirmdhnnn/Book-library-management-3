@@ -148,6 +148,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MembersUC.resx">
       <DependentUpon>MembersUC.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ReturnUC.resx">
       <DependentUpon>ReturnUC.cs</DependentUpon>
