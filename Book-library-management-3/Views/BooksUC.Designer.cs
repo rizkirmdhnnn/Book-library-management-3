@@ -28,27 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lv_Books = new System.Windows.Forms.ListView();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txt_total = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_total = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lv_Books = new System.Windows.Forms.ListView();
             this.guna2Panel9.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lv_Books
-            // 
-            this.lv_Books.HideSelection = false;
-            this.lv_Books.Location = new System.Drawing.Point(28, 81);
-            this.lv_Books.Name = "lv_Books";
-            this.lv_Books.Size = new System.Drawing.Size(817, 445);
-            this.lv_Books.TabIndex = 17;
-            this.lv_Books.UseCompatibleStateImageBehavior = false;
             // 
             // guna2Panel9
             // 
@@ -64,17 +55,16 @@
             this.guna2Panel9.Size = new System.Drawing.Size(860, 63);
             this.guna2Panel9.TabIndex = 14;
             // 
-            // txt_total
+            // guna2Panel1
             // 
-            this.txt_total.AutoSize = true;
-            this.txt_total.BackColor = System.Drawing.Color.Transparent;
-            this.txt_total.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total.Location = new System.Drawing.Point(21, 7);
-            this.txt_total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txt_total.Name = "txt_total";
-            this.txt_total.Size = new System.Drawing.Size(54, 44);
-            this.txt_total.TabIndex = 11;
-            this.txt_total.Text = "10";
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.Controls.Add(this.btn_add);
+            this.guna2Panel1.Controls.Add(this.guna2TextBox1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2Panel1.Location = new System.Drawing.Point(491, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(369, 63);
+            this.guna2Panel1.TabIndex = 12;
             // 
             // btn_add
             // 
@@ -96,18 +86,6 @@
             this.btn_add.TabIndex = 10;
             this.btn_add.Text = "Add";
             this.btn_add.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(74, 21);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 21);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Total Books";
             // 
             // guna2TextBox1
             // 
@@ -131,6 +109,30 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(202, 32);
             this.guna2TextBox1.TabIndex = 2;
             // 
+            // txt_total
+            // 
+            this.txt_total.AutoSize = true;
+            this.txt_total.BackColor = System.Drawing.Color.Transparent;
+            this.txt_total.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total.Location = new System.Drawing.Point(21, 7);
+            this.txt_total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txt_total.Name = "txt_total";
+            this.txt_total.Size = new System.Drawing.Size(54, 44);
+            this.txt_total.TabIndex = 11;
+            this.txt_total.Text = "10";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(74, 21);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 21);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Total Books";
+            // 
             // guna2Button2
             // 
             this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
@@ -144,7 +146,7 @@
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
             this.guna2Button2.Image = global::Book_library_management_3.Properties.Resources.Delete;
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button2.Location = new System.Drawing.Point(613, 531);
+            this.guna2Button2.Location = new System.Drawing.Point(593, 535);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(122, 31);
@@ -165,7 +167,7 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
             this.guna2Button1.Image = global::Book_library_management_3.Properties.Resources.Edit;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button1.Location = new System.Drawing.Point(739, 531);
+            this.guna2Button1.Location = new System.Drawing.Point(719, 535);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(106, 31);
@@ -173,23 +175,21 @@
             this.guna2Button1.Text = "Edit Data";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // guna2Panel1
+            // lv_Books
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Controls.Add(this.btn_add);
-            this.guna2Panel1.Controls.Add(this.guna2TextBox1);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel1.Location = new System.Drawing.Point(491, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(369, 63);
-            this.guna2Panel1.TabIndex = 12;
+            this.lv_Books.HideSelection = false;
+            this.lv_Books.Location = new System.Drawing.Point(29, 83);
+            this.lv_Books.Name = "lv_Books";
+            this.lv_Books.Size = new System.Drawing.Size(796, 444);
+            this.lv_Books.TabIndex = 24;
+            this.lv_Books.UseCompatibleStateImageBehavior = false;
             // 
             // BooksUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.lv_Books);
+            this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2Panel9);
             this.Name = "BooksUC";
@@ -202,7 +202,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ListView lv_Books;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Button btn_add;
@@ -211,5 +210,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.ListView lv_Books;
     }
 }

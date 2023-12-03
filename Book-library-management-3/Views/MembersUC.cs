@@ -30,16 +30,16 @@ namespace Book_library_management_3.Views
         }
         private void InitializeListView()
         {
-            lv_History.View = System.Windows.Forms.View.Details;
-            lv_History.FullRowSelect = true;
-            lv_History.GridLines = true;
-            lv_History.Columns.Add("", 0, HorizontalAlignment.Right);
-            lv_History.Columns.Add("Username", 180, HorizontalAlignment.Left);
-            lv_History.Columns.Add("Password",  110, HorizontalAlignment.Left);
-            lv_History.Columns.Add("Name", 210, HorizontalAlignment.Left);
-            lv_History.Columns.Add("Email", 100, HorizontalAlignment.Left);
-            lv_History.Columns.Add("Status", 110, HorizontalAlignment.Left);
-            lv_History.Columns.Add("Date Register", 100, HorizontalAlignment.Left);
+            lv_Members.View = System.Windows.Forms.View.Details;
+            lv_Members.FullRowSelect = true;
+            lv_Members.GridLines = true;
+            lv_Members.Columns.Add("", 0, HorizontalAlignment.Right);
+            lv_Members.Columns.Add("Username", 180, HorizontalAlignment.Left);
+            lv_Members.Columns.Add("Password",  110, HorizontalAlignment.Left);
+            lv_Members.Columns.Add("Name", 210, HorizontalAlignment.Left);
+            lv_Members.Columns.Add("Email", 100, HorizontalAlignment.Left);
+            lv_Members.Columns.Add("Status", 110, HorizontalAlignment.Left);
+            lv_Members.Columns.Add("Date Register", 100, HorizontalAlignment.Left);
         }
     }
 }
