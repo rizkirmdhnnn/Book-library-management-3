@@ -110,7 +110,7 @@ namespace Book_library_management_3.Controllers
             using (DbContext context = new DbContext())
             {
                 _repository = new BooksRepository(context);
-                result = _repository.deleteBook(book);
+                result = _repository.updateBook(book);
 
             }
 
