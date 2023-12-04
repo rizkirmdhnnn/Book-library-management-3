@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Book_library_management_3.Models.Entity;
 using Book_library_management_3.Controllers;
+using Book_library_management_3.Views.Dashboard.Books_Section;
 
 namespace Book_library_management_3.Views
 {
@@ -83,5 +84,29 @@ namespace Book_library_management_3.Views
 
             }
         }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            popUp_Books popUp = new popUp_Books("Add Book", _booksControler);
+            popUp.OnCreate += OnCreateEventHandler;
+
+            popUp.Show();
+        }
+
+        // method event handler untuk merespon event OnCreate,
+        private void OnCreateEventHandler(Books books)
+        {
+            // tambahkan objek mhs yang baru ke dalam collection
+            lvbook.Add(books);
+            ListViewItem item = new ListViewItem();
+            item.SubItems.Add(books.isbn);
+            item.SubItems.Add(books.title);
+            item.SubItems.Add(books.writter);
+            item.SubItems.Add(books.genre);
+            item.SubItems.Add(books.publisher);
+            item.SubItems.Add(books.stocks.ToString());
+            lv_Books.Items.Add(item);
+        }
+        // method event handler untuk merespon event OnUpdate,
     }
 }

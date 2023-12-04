@@ -38,6 +38,10 @@ namespace Book_library_management_3.Models.Repository
                 {
                     result = command.ExecuteNonQuery();
                 }
+                catch (SQLiteException ex)
+                {
+                    MessageBox.Show("SQLite Error: {0}. Query: {1}", ex.Message);
+                }
                 catch (Exception ex)
                 {
                     System.Diagnostics.Debug.Print("Create error : {0}", ex.Message);
