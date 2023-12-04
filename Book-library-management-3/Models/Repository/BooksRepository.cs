@@ -52,6 +52,38 @@ namespace Book_library_management_3.Models.Repository
             return result;
         }
 
+        public int updateBook(Books books)
+        {
+            int result = 0;
+
+            string sql = @"UPDATE books SET title = @title, writter = @writter, genre = @genre, publisher = @publisher, stocks = @stocks WHERE isbn = @isbn";
+            using (SQLiteCommand command = new SQLiteCommand(sql, _connection))
+            {
+                command.Parameters.AddWithValue("@isbn", books.isbn);
+                command.Parameters.AddWithValue("@title", books.title);
+                command.Parameters.AddWithValue("@writter", books.writter);
+                command.Parameters.AddWithValue("@genre", books.genre);
+                command.Parameters.AddWithValue("@publisher", books.publisher);
+                command.Parameters.AddWithValue("@stocks", books.stocks);
+
+                try
+                {
+                    result = command.ExecuteNonQuery();
+                }
+                catch (SQLiteException ex)
+                {
+                    MessageBox.Show("SQLite Error: {0}. Query: {1}", ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.Print("Create error : {0}", ex.Message);
+                }
+            }
+
+
+            return result;
+        }
+
         public int updateStocksBooks(Books books, string IncreseOrDecrease)
         {
             int result = 0;

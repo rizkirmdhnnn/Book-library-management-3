@@ -66,6 +66,57 @@ namespace Book_library_management_3.Controllers
             return result;
         }
 
+        public int updateBook(Books book)
+        {
+            int result = 0;
+
+            if (string.IsNullOrEmpty(book.isbn))
+            {
+                MessageBox.Show("Isbn cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            if (string.IsNullOrEmpty(book.title))
+            {
+                MessageBox.Show("Title cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+
+            if (string.IsNullOrEmpty(book.writter))
+            {
+                MessageBox.Show("Writter cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            if (string.IsNullOrEmpty(book.genre))
+            {
+                MessageBox.Show("Genre cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            if (string.IsNullOrEmpty(book.publisher))
+            {
+                MessageBox.Show("Publisher cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            if (book.stocks == default(int))
+            {
+                MessageBox.Show("Stocks cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new BooksRepository(context);
+                result = _repository.deleteBook(book);
+
+            }
+
+            return result;
+        }
+
         public int updateStocksBooks(Books  books, string IncreseOrDecrease)
         {
             int result = 0;
