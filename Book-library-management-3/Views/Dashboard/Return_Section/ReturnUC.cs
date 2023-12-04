@@ -16,5 +16,10 @@ namespace Book_library_management_3.Views
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
