@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Book_library_management_3.Models.Entity;
 using Book_library_management_3.Controllers;
 using Book_library_management_3.Views.Dashboard.Books_Section;
+using Guna.UI2.AnimatorNS;
 
 namespace Book_library_management_3.Views
 {
@@ -93,10 +94,8 @@ namespace Book_library_management_3.Views
             popUp.Show();
         }
 
-        // method event handler untuk merespon event OnCreate,
         private void OnCreateEventHandler(Books books)
         {
-            // tambahkan objek mhs yang baru ke dalam collection
             lvbook.Add(books);
             ListViewItem item = new ListViewItem();
             item.SubItems.Add(books.isbn);
@@ -107,6 +106,63 @@ namespace Book_library_management_3.Views
             item.SubItems.Add(books.stocks.ToString());
             lv_Books.Items.Add(item);
         }
-        // method event handler untuk merespon event OnUpdate,
+
+        private void OnUpdateEventHandler(Books books)
+        {
+            // ambil index data mhs yang edit
+            int index = lv_Books.SelectedIndices[0];
+            // update informasi mhs di listview
+            ListViewItem itemRow = lv_Books.Items[index];
+            itemRow.SubItems[1].Text = books.isbn;
+            itemRow.SubItems[2].Text = books.title;
+            itemRow.SubItems[3].Text = books.writter;
+            itemRow.SubItems[4].Text = books.genre;
+            itemRow.SubItems[5].Text = books.writter;
+            itemRow.SubItems[6].Text = books.stocks.ToString();
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            if (lv_Books.SelectedItems.Count > 0)
+            {
+                var konfirmasi = MessageBox.Show("Do you want to delete the book data?", "Confirmation",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (konfirmasi == DialogResult.Yes)
+                {
+                    // ambil objek mhs yang mau dihapus dari collection
+                    Books books =  lvbook[lv_Books.SelectedIndices[0]];
+                    // panggil operasi CRUD
+                    var result = _booksControler.deleteBook(books);
+                    if (result > 0) loadData();
+                }
+            }
+            else // data belum dipilih
+            {
+                MessageBox.Show("Book data has not been selected", "Warning",
+                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+        }
+
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+            if (lv_Books.SelectedItems.Count > 0)
+            {
+                // ambil objek mhs yang mau diedit dari collection
+                Books books = lvbook[lv_Books.SelectedIndices[0]];
+                // buat objek form entry data mahasiswa
+                popUp_Books popUp_Books = new popUp_Books("Edit book data", books, _booksControler);
+                // mendaftarkan method event handler untuk merespon event OnUpdate
+                popUp_Books.OnUpdate += OnUpdateEventHandler;
+                // tampilkan form entry mahasiswa
+                popUp_Books.ShowDialog();
+            }
+            else // data belum dipilih
+            {
+                MessageBox.Show("Data belum dipilih", "Peringatan",
+               MessageBoxButtons.OK,
+                MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }

@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txt_Label = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtbox_Isbn = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtbox_Title = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtbox_Writter = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btn_Save = new Guna.UI2.WinForms.Guna2Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtbox_Stocks = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtbox_Publisher = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtbox_Genre = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btn_Save = new Guna.UI2.WinForms.Guna2Button();
+            this.txtbox_Writter = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtbox_Title = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtbox_Isbn = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txt_Label = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -59,15 +59,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(529, 328);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Controls.Add(this.txt_Label);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(529, 70);
-            this.guna2Panel2.TabIndex = 0;
             // 
             // guna2Panel3
             // 
@@ -84,107 +75,42 @@
             this.guna2Panel3.Controls.Add(this.label2);
             this.guna2Panel3.Controls.Add(this.txtbox_Isbn);
             this.guna2Panel3.Controls.Add(this.label1);
+            this.guna2Panel3.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Panel3.Location = new System.Drawing.Point(76, 76);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(379, 240);
             this.guna2Panel3.TabIndex = 1;
             // 
-            // txt_Label
+            // btn_Save
             // 
-            this.txt_Label.AutoSize = true;
-            this.txt_Label.Font = new System.Drawing.Font("Montserrat", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Label.Location = new System.Drawing.Point(217, 18);
-            this.txt_Label.Name = "txt_Label";
-            this.txt_Label.Size = new System.Drawing.Size(97, 37);
-            this.txt_Label.TabIndex = 0;
-            this.txt_Label.Text = "label1";
+            this.btn_Save.BorderRadius = 5;
+            this.btn_Save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Save.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btn_Save.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Save.ForeColor = System.Drawing.Color.White;
+            this.btn_Save.Location = new System.Drawing.Point(128, 189);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(113, 34);
+            this.btn_Save.TabIndex = 12;
+            this.btn_Save.Text = "Save ";
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
-            // label1
+            // label6
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            // 
-            // txtbox_Isbn
-            // 
-            this.txtbox_Isbn.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtbox_Isbn.DefaultText = "";
-            this.txtbox_Isbn.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtbox_Isbn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtbox_Isbn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtbox_Isbn.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtbox_Isbn.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtbox_Isbn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtbox_Isbn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtbox_Isbn.Location = new System.Drawing.Point(21, 30);
-            this.txtbox_Isbn.Name = "txtbox_Isbn";
-            this.txtbox_Isbn.PasswordChar = '\0';
-            this.txtbox_Isbn.PlaceholderText = "";
-            this.txtbox_Isbn.SelectedText = "";
-            this.txtbox_Isbn.Size = new System.Drawing.Size(138, 29);
-            this.txtbox_Isbn.TabIndex = 1;
-            // 
-            // txtbox_Title
-            // 
-            this.txtbox_Title.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtbox_Title.DefaultText = "";
-            this.txtbox_Title.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtbox_Title.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtbox_Title.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtbox_Title.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtbox_Title.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtbox_Title.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtbox_Title.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtbox_Title.Location = new System.Drawing.Point(21, 82);
-            this.txtbox_Title.Name = "txtbox_Title";
-            this.txtbox_Title.PasswordChar = '\0';
-            this.txtbox_Title.PlaceholderText = "";
-            this.txtbox_Title.SelectedText = "";
-            this.txtbox_Title.Size = new System.Drawing.Size(138, 29);
-            this.txtbox_Title.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
-            // 
-            // txtbox_Writter
-            // 
-            this.txtbox_Writter.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtbox_Writter.DefaultText = "";
-            this.txtbox_Writter.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtbox_Writter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtbox_Writter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtbox_Writter.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtbox_Writter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtbox_Writter.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtbox_Writter.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtbox_Writter.Location = new System.Drawing.Point(21, 134);
-            this.txtbox_Writter.Name = "txtbox_Writter";
-            this.txtbox_Writter.PasswordChar = '\0';
-            this.txtbox_Writter.PlaceholderText = "";
-            this.txtbox_Writter.SelectedText = "";
-            this.txtbox_Writter.Size = new System.Drawing.Size(138, 29);
-            this.txtbox_Writter.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(214, 65);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 16);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Publisher Book";
             // 
             // txtbox_Stocks
             // 
+            this.txtbox_Stocks.BorderRadius = 5;
             this.txtbox_Stocks.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtbox_Stocks.DefaultText = "";
             this.txtbox_Stocks.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -201,18 +127,21 @@
             this.txtbox_Stocks.SelectedText = "";
             this.txtbox_Stocks.Size = new System.Drawing.Size(138, 29);
             this.txtbox_Stocks.TabIndex = 10;
+            this.txtbox_Stocks.TextChanged += new System.EventHandler(this.txtbox_Stocks_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(214, 118);
+            this.label4.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(214, 117);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(47, 16);
             this.label4.TabIndex = 9;
-            this.label4.Text = "label4";
+            this.label4.Text = "Stocks";
             // 
             // txtbox_Publisher
             // 
+            this.txtbox_Publisher.BorderRadius = 5;
             this.txtbox_Publisher.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtbox_Publisher.DefaultText = "";
             this.txtbox_Publisher.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -232,6 +161,7 @@
             // 
             // txtbox_Genre
             // 
+            this.txtbox_Genre.BorderRadius = 5;
             this.txtbox_Genre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtbox_Genre.DefaultText = "";
             this.txtbox_Genre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -252,35 +182,124 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(214, 14);
+            this.label5.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(214, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(78, 16);
             this.label5.TabIndex = 6;
-            this.label5.Text = "label5";
+            this.label5.Text = "Genre Book";
             // 
-            // label6
+            // txtbox_Writter
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(214, 66);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "label6";
+            this.txtbox_Writter.BorderRadius = 5;
+            this.txtbox_Writter.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtbox_Writter.DefaultText = "";
+            this.txtbox_Writter.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtbox_Writter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtbox_Writter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbox_Writter.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbox_Writter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbox_Writter.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtbox_Writter.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbox_Writter.Location = new System.Drawing.Point(21, 134);
+            this.txtbox_Writter.Name = "txtbox_Writter";
+            this.txtbox_Writter.PasswordChar = '\0';
+            this.txtbox_Writter.PlaceholderText = "";
+            this.txtbox_Writter.SelectedText = "";
+            this.txtbox_Writter.Size = new System.Drawing.Size(138, 29);
+            this.txtbox_Writter.TabIndex = 5;
             // 
-            // btn_Save
+            // label3
             // 
-            this.btn_Save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Save.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Save.ForeColor = System.Drawing.Color.White;
-            this.btn_Save.Location = new System.Drawing.Point(98, 180);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(180, 45);
-            this.btn_Save.TabIndex = 12;
-            this.btn_Save.Text = "guna2Button1";
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(21, 117);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 16);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Writter Book";
+            // 
+            // txtbox_Title
+            // 
+            this.txtbox_Title.BorderRadius = 5;
+            this.txtbox_Title.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtbox_Title.DefaultText = "";
+            this.txtbox_Title.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtbox_Title.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtbox_Title.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbox_Title.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbox_Title.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbox_Title.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtbox_Title.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbox_Title.Location = new System.Drawing.Point(21, 82);
+            this.txtbox_Title.Name = "txtbox_Title";
+            this.txtbox_Title.PasswordChar = '\0';
+            this.txtbox_Title.PlaceholderText = "";
+            this.txtbox_Title.SelectedText = "";
+            this.txtbox_Title.Size = new System.Drawing.Size(138, 29);
+            this.txtbox_Title.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Title Book";
+            // 
+            // txtbox_Isbn
+            // 
+            this.txtbox_Isbn.BorderRadius = 5;
+            this.txtbox_Isbn.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtbox_Isbn.DefaultText = "";
+            this.txtbox_Isbn.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtbox_Isbn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtbox_Isbn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbox_Isbn.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbox_Isbn.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbox_Isbn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtbox_Isbn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbox_Isbn.Location = new System.Drawing.Point(21, 30);
+            this.txtbox_Isbn.Name = "txtbox_Isbn";
+            this.txtbox_Isbn.PasswordChar = '\0';
+            this.txtbox_Isbn.PlaceholderText = "";
+            this.txtbox_Isbn.SelectedText = "";
+            this.txtbox_Isbn.Size = new System.Drawing.Size(138, 29);
+            this.txtbox_Isbn.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ISBN";
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Controls.Add(this.txt_Label);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(529, 70);
+            this.guna2Panel2.TabIndex = 0;
+            // 
+            // txt_Label
+            // 
+            this.txt_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Label.AutoSize = true;
+            this.txt_Label.Font = new System.Drawing.Font("Montserrat", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Label.Location = new System.Drawing.Point(185, 18);
+            this.txt_Label.Name = "txt_Label";
+            this.txt_Label.Size = new System.Drawing.Size(159, 37);
+            this.txt_Label.TabIndex = 0;
+            this.txt_Label.Text = "Add Book";
             // 
             // popUp_Books
             // 
@@ -293,13 +312,12 @@
             this.MinimizeBox = false;
             this.Name = "popUp_Books";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "popUp_Books";
             this.TopMost = true;
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Book_library_management_3.Models.Entity;
 using Book_library_management_3.Controllers;
+using System.Text.RegularExpressions;
 
 namespace Book_library_management_3.Views.Dashboard.Books_Section
 {
@@ -37,21 +38,26 @@ namespace Book_library_management_3.Views.Dashboard.Books_Section
             InitializeComponent();
         }
 
-        public popUp_Books(string title, BooksControler controler)
+        
+        public popUp_Books(string title, BooksControler controler) : this()
+
         {
-            InitializeComponent();
-            this.Text = title;
-            _booksControler = controler;
-        }
-        public popUp_Books(string title, Books obj, BooksControler controler) : this()
-        {
-            InitializeComponent();
 
             this.Text = title;
+            txt_Label.Text = title;
+            _booksControler = controler;
+        }
+
+
+        public popUp_Books(string title, Books books, BooksControler controler) : this()
+        {
+
+            this.Text = title;
+            txt_Label.Text = title;
             this._booksControler = controler;
 
             isNewData = false;
-            _books = obj;
+            _books = books;
 
             txtbox_Isbn.Text = _books.isbn;
             txtbox_Title.Text = _books.title;
@@ -71,8 +77,10 @@ namespace Book_library_management_3.Views.Dashboard.Books_Section
             _books.writter = txtbox_Writter.Text;
             _books.genre = txtbox_Genre.Text;
             _books.publisher = txtbox_Publisher.Text;
-            _books.stocks = Convert.ToInt32(txtbox_Stocks.Text);
-
+            if(txtbox_Stocks.Text != "")
+            {
+                _books.stocks = Convert.ToInt32(txtbox_Stocks.Text);
+            }
             int result = 0;
 
             if(isNewData)
@@ -92,6 +100,30 @@ namespace Book_library_management_3.Views.Dashboard.Books_Section
 
                     txtbox_Isbn.Focus();
                 }
+            } else
+            {
+                result = _booksControler.updateBook( _books);
+                if (result > 0)
+                {
+                    OnUpdate(_books);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ada yg salah dengan controler");
+                }
+
+            }
+        }
+
+        private void txtbox_Stocks_TextChanged(object sender, EventArgs e)
+        {
+            string input = txtbox_Stocks.Text;
+            if (!Regex.IsMatch(input, "^[0-9]*$"))
+            {
+                MessageBox.Show("Only numbers are allowed!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtbox_Stocks.Text = Regex.Replace(input, "[^0-9]", "");
+                txtbox_Stocks.SelectionStart = txtbox_Stocks.Text.Length;
             }
         }
     }
