@@ -81,6 +81,11 @@ namespace Book_library_management_3.Views
             lv_RecentMembers.Columns.Add("Username", 170, HorizontalAlignment.Left);
             lv_RecentMembers.Columns.Add("Type Account", 170, HorizontalAlignment.Left);
 
-        } 
-     }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
 }
