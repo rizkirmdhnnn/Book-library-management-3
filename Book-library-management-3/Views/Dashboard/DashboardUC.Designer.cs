@@ -33,85 +33,85 @@
             this.guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_totalBook = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_members = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox11 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox12 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txt_borrowing = new System.Windows.Forms.Label();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox13 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txt_returned = new System.Windows.Forms.Label();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.lv_RecentBooks = new System.Windows.Forms.ListView();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.lv_RecentMembers = new System.Windows.Forms.ListView();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txt_wlc = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.guna2PictureBox14 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox13 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox12 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox11 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_date = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_wlc = new System.Windows.Forms.Label();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
             this.guna2Panel11.SuspendLayout();
             this.guna2Panel12.SuspendLayout();
             this.guna2Panel13.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
-            this.guna2Panel14.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
-            this.guna2Panel15.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
-            this.guna2Panel16.SuspendLayout();
-            this.guna2Panel5.SuspendLayout();
-            this.guna2Panel8.SuspendLayout();
-            this.guna2Panel6.SuspendLayout();
-            this.guna2Panel7.SuspendLayout();
-            this.guna2Panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
+            this.guna2Panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.guna2Panel4.SuspendLayout();
+            this.guna2Panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            this.guna2Panel5.SuspendLayout();
+            this.guna2Panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
+            this.guna2Panel6.SuspendLayout();
+            this.guna2Panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
+            this.guna2Panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox14)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel3
@@ -196,6 +196,16 @@
             this.guna2Panel13.Size = new System.Drawing.Size(168, 47);
             this.guna2Panel13.TabIndex = 12;
             // 
+            // guna2PictureBox10
+            // 
+            this.guna2PictureBox10.Image = global::Book_library_management_3.Properties.Resources.Books_ON;
+            this.guna2PictureBox10.ImageRotate = 0F;
+            this.guna2PictureBox10.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox10.Name = "guna2PictureBox10";
+            this.guna2PictureBox10.Size = new System.Drawing.Size(22, 30);
+            this.guna2PictureBox10.TabIndex = 9;
+            this.guna2PictureBox10.TabStop = false;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -206,6 +216,16 @@
             this.label13.Size = new System.Drawing.Size(87, 20);
             this.label13.TabIndex = 9;
             this.label13.Text = "Total Book";
+            // 
+            // guna2PictureBox9
+            // 
+            this.guna2PictureBox9.Image = global::Book_library_management_3.Properties.Resources.Books_ON;
+            this.guna2PictureBox9.ImageRotate = 0F;
+            this.guna2PictureBox9.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox9.Name = "guna2PictureBox9";
+            this.guna2PictureBox9.Size = new System.Drawing.Size(22, 30);
+            this.guna2PictureBox9.TabIndex = 9;
+            this.guna2PictureBox9.TabStop = false;
             // 
             // label12
             // 
@@ -218,6 +238,16 @@
             this.label12.TabIndex = 9;
             this.label12.Text = "Recent Books";
             // 
+            // guna2PictureBox8
+            // 
+            this.guna2PictureBox8.Image = global::Book_library_management_3.Properties.Resources.Books_ON;
+            this.guna2PictureBox8.ImageRotate = 0F;
+            this.guna2PictureBox8.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox8.Name = "guna2PictureBox8";
+            this.guna2PictureBox8.Size = new System.Drawing.Size(22, 30);
+            this.guna2PictureBox8.TabIndex = 9;
+            this.guna2PictureBox8.TabStop = false;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -228,6 +258,16 @@
             this.label11.Size = new System.Drawing.Size(110, 20);
             this.label11.TabIndex = 9;
             this.label11.Text = "Recent Books";
+            // 
+            // guna2PictureBox7
+            // 
+            this.guna2PictureBox7.Image = global::Book_library_management_3.Properties.Resources.Books_ON;
+            this.guna2PictureBox7.ImageRotate = 0F;
+            this.guna2PictureBox7.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox7.Name = "guna2PictureBox7";
+            this.guna2PictureBox7.Size = new System.Drawing.Size(22, 30);
+            this.guna2PictureBox7.TabIndex = 9;
+            this.guna2PictureBox7.TabStop = false;
             // 
             // label10
             // 
@@ -252,6 +292,16 @@
             this.txt_totalBook.TabIndex = 8;
             this.txt_totalBook.Text = "345";
             this.txt_totalBook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Book_library_management_3.Properties.Resources.Books;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(13, 12);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(49, 38);
+            this.guna2PictureBox1.TabIndex = 7;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -320,6 +370,16 @@
             this.guna2Panel14.Size = new System.Drawing.Size(168, 47);
             this.guna2Panel14.TabIndex = 12;
             // 
+            // guna2PictureBox11
+            // 
+            this.guna2PictureBox11.Image = global::Book_library_management_3.Properties.Resources.Members_ON;
+            this.guna2PictureBox11.ImageRotate = 0F;
+            this.guna2PictureBox11.Location = new System.Drawing.Point(13, 15);
+            this.guna2PictureBox11.Name = "guna2PictureBox11";
+            this.guna2PictureBox11.Size = new System.Drawing.Size(32, 30);
+            this.guna2PictureBox11.TabIndex = 9;
+            this.guna2PictureBox11.TabStop = false;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -330,6 +390,16 @@
             this.label14.Size = new System.Drawing.Size(118, 20);
             this.label14.TabIndex = 9;
             this.label14.Text = "Total Members";
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::Book_library_management_3.Properties.Resources.Books;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(13, 12);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(49, 38);
+            this.guna2PictureBox2.TabIndex = 7;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // guna2Panel2
             // 
@@ -365,6 +435,16 @@
             this.guna2Panel15.Size = new System.Drawing.Size(168, 47);
             this.guna2Panel15.TabIndex = 12;
             // 
+            // guna2PictureBox12
+            // 
+            this.guna2PictureBox12.Image = global::Book_library_management_3.Properties.Resources.Transaction_ON;
+            this.guna2PictureBox12.ImageRotate = 0F;
+            this.guna2PictureBox12.Location = new System.Drawing.Point(13, 12);
+            this.guna2PictureBox12.Name = "guna2PictureBox12";
+            this.guna2PictureBox12.Size = new System.Drawing.Size(30, 30);
+            this.guna2PictureBox12.TabIndex = 9;
+            this.guna2PictureBox12.TabStop = false;
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -388,6 +468,16 @@
             this.txt_borrowing.TabIndex = 8;
             this.txt_borrowing.Text = "24";
             this.txt_borrowing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = global::Book_library_management_3.Properties.Resources.Books;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(13, 12);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(49, 38);
+            this.guna2PictureBox3.TabIndex = 7;
+            this.guna2PictureBox3.TabStop = false;
             // 
             // label5
             // 
@@ -433,6 +523,16 @@
             this.guna2Panel16.Size = new System.Drawing.Size(168, 47);
             this.guna2Panel16.TabIndex = 12;
             // 
+            // guna2PictureBox13
+            // 
+            this.guna2PictureBox13.Image = global::Book_library_management_3.Properties.Resources.Return_ON;
+            this.guna2PictureBox13.ImageRotate = 0F;
+            this.guna2PictureBox13.Location = new System.Drawing.Point(11, 11);
+            this.guna2PictureBox13.Name = "guna2PictureBox13";
+            this.guna2PictureBox13.Size = new System.Drawing.Size(32, 30);
+            this.guna2PictureBox13.TabIndex = 9;
+            this.guna2PictureBox13.TabStop = false;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -456,6 +556,16 @@
             this.txt_returned.TabIndex = 8;
             this.txt_returned.Text = "100";
             this.txt_returned.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Image = global::Book_library_management_3.Properties.Resources.Books;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(13, 12);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(49, 38);
+            this.guna2PictureBox4.TabIndex = 7;
+            this.guna2PictureBox4.TabStop = false;
             // 
             // label7
             // 
@@ -504,6 +614,16 @@
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.Size = new System.Drawing.Size(371, 47);
             this.guna2Panel8.TabIndex = 11;
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.Image = global::Book_library_management_3.Properties.Resources.Books_ON;
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(22, 30);
+            this.guna2PictureBox5.TabIndex = 9;
+            this.guna2PictureBox5.TabStop = false;
             // 
             // label8
             // 
@@ -554,6 +674,16 @@
             this.guna2Panel7.Size = new System.Drawing.Size(371, 47);
             this.guna2Panel7.TabIndex = 10;
             // 
+            // guna2PictureBox6
+            // 
+            this.guna2PictureBox6.Image = global::Book_library_management_3.Properties.Resources.Members_ON;
+            this.guna2PictureBox6.ImageRotate = 0F;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(13, 15);
+            this.guna2PictureBox6.Name = "guna2PictureBox6";
+            this.guna2PictureBox6.Size = new System.Drawing.Size(30, 30);
+            this.guna2PictureBox6.TabIndex = 10;
+            this.guna2PictureBox6.TabStop = false;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -570,7 +700,7 @@
             this.guna2Panel9.Controls.Add(this.guna2PictureBox14);
             this.guna2Panel9.Controls.Add(this.label17);
             this.guna2Panel9.Controls.Add(this.label6);
-            this.guna2Panel9.Controls.Add(this.label4);
+            this.guna2Panel9.Controls.Add(this.txt_date);
             this.guna2Panel9.Controls.Add(this.label2);
             this.guna2Panel9.Controls.Add(this.txt_wlc);
             this.guna2Panel9.Dock = System.Windows.Forms.DockStyle.Top;
@@ -581,62 +711,6 @@
             this.guna2Panel9.ShadowDecoration.Enabled = true;
             this.guna2Panel9.Size = new System.Drawing.Size(864, 63);
             this.guna2Panel9.TabIndex = 12;
-            // 
-            // txt_wlc
-            // 
-            this.txt_wlc.AutoSize = true;
-            this.txt_wlc.BackColor = System.Drawing.Color.Transparent;
-            this.txt_wlc.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_wlc.Location = new System.Drawing.Point(33, 9);
-            this.txt_wlc.Name = "txt_wlc";
-            this.txt_wlc.Size = new System.Drawing.Size(73, 26);
-            this.txt_wlc.TabIndex = 0;
-            this.txt_wlc.Text = "Hello, ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(136)))), ((int)(((byte)(61)))));
-            this.label2.Location = new System.Drawing.Point(98, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 26);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Alex!";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(35, 39);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Des 04, 2023 | Monday, 11:00 AM";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(696, 17);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 15);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Aditya Alex";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(689, 32);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(80, 15);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Administrator";
             // 
             // guna2PictureBox14
             // 
@@ -651,135 +725,61 @@
             this.guna2PictureBox14.TabIndex = 13;
             this.guna2PictureBox14.TabStop = false;
             // 
-            // guna2PictureBox6
+            // label17
             // 
-            this.guna2PictureBox6.Image = global::Book_library_management_3.Properties.Resources.Members_ON;
-            this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(13, 15);
-            this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.guna2PictureBox6.TabIndex = 10;
-            this.guna2PictureBox6.TabStop = false;
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(689, 32);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(80, 15);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Administrator";
             // 
-            // guna2PictureBox5
+            // label6
             // 
-            this.guna2PictureBox5.Image = global::Book_library_management_3.Properties.Resources.Books_ON;
-            this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(13, 13);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(22, 30);
-            this.guna2PictureBox5.TabIndex = 9;
-            this.guna2PictureBox5.TabStop = false;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(696, 17);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 15);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Aditya Alex";
             // 
-            // guna2PictureBox13
+            // txt_date
             // 
-            this.guna2PictureBox13.Image = global::Book_library_management_3.Properties.Resources.Return_ON;
-            this.guna2PictureBox13.ImageRotate = 0F;
-            this.guna2PictureBox13.Location = new System.Drawing.Point(11, 11);
-            this.guna2PictureBox13.Name = "guna2PictureBox13";
-            this.guna2PictureBox13.Size = new System.Drawing.Size(32, 30);
-            this.guna2PictureBox13.TabIndex = 9;
-            this.guna2PictureBox13.TabStop = false;
+            this.txt_date.AutoSize = true;
+            this.txt_date.BackColor = System.Drawing.Color.Transparent;
+            this.txt_date.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_date.Location = new System.Drawing.Point(35, 39);
+            this.txt_date.Name = "txt_date";
+            this.txt_date.Size = new System.Drawing.Size(199, 16);
+            this.txt_date.TabIndex = 2;
+            this.txt_date.Text = "Des 04, 2023 | Monday, 11:00 AM";
             // 
-            // guna2PictureBox4
+            // label2
             // 
-            this.guna2PictureBox4.Image = global::Book_library_management_3.Properties.Resources.Books;
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(13, 12);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(49, 38);
-            this.guna2PictureBox4.TabIndex = 7;
-            this.guna2PictureBox4.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(136)))), ((int)(((byte)(61)))));
+            this.label2.Location = new System.Drawing.Point(98, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 26);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Alex!";
             // 
-            // guna2PictureBox12
+            // txt_wlc
             // 
-            this.guna2PictureBox12.Image = global::Book_library_management_3.Properties.Resources.Transaction_ON;
-            this.guna2PictureBox12.ImageRotate = 0F;
-            this.guna2PictureBox12.Location = new System.Drawing.Point(13, 12);
-            this.guna2PictureBox12.Name = "guna2PictureBox12";
-            this.guna2PictureBox12.Size = new System.Drawing.Size(30, 30);
-            this.guna2PictureBox12.TabIndex = 9;
-            this.guna2PictureBox12.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = global::Book_library_management_3.Properties.Resources.Books;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(13, 12);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(49, 38);
-            this.guna2PictureBox3.TabIndex = 7;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2PictureBox11
-            // 
-            this.guna2PictureBox11.Image = global::Book_library_management_3.Properties.Resources.Members_ON;
-            this.guna2PictureBox11.ImageRotate = 0F;
-            this.guna2PictureBox11.Location = new System.Drawing.Point(13, 15);
-            this.guna2PictureBox11.Name = "guna2PictureBox11";
-            this.guna2PictureBox11.Size = new System.Drawing.Size(32, 30);
-            this.guna2PictureBox11.TabIndex = 9;
-            this.guna2PictureBox11.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::Book_library_management_3.Properties.Resources.Books;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(13, 12);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(49, 38);
-            this.guna2PictureBox2.TabIndex = 7;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox10
-            // 
-            this.guna2PictureBox10.Image = global::Book_library_management_3.Properties.Resources.Books_ON;
-            this.guna2PictureBox10.ImageRotate = 0F;
-            this.guna2PictureBox10.Location = new System.Drawing.Point(13, 13);
-            this.guna2PictureBox10.Name = "guna2PictureBox10";
-            this.guna2PictureBox10.Size = new System.Drawing.Size(22, 30);
-            this.guna2PictureBox10.TabIndex = 9;
-            this.guna2PictureBox10.TabStop = false;
-            // 
-            // guna2PictureBox9
-            // 
-            this.guna2PictureBox9.Image = global::Book_library_management_3.Properties.Resources.Books_ON;
-            this.guna2PictureBox9.ImageRotate = 0F;
-            this.guna2PictureBox9.Location = new System.Drawing.Point(13, 13);
-            this.guna2PictureBox9.Name = "guna2PictureBox9";
-            this.guna2PictureBox9.Size = new System.Drawing.Size(22, 30);
-            this.guna2PictureBox9.TabIndex = 9;
-            this.guna2PictureBox9.TabStop = false;
-            // 
-            // guna2PictureBox8
-            // 
-            this.guna2PictureBox8.Image = global::Book_library_management_3.Properties.Resources.Books_ON;
-            this.guna2PictureBox8.ImageRotate = 0F;
-            this.guna2PictureBox8.Location = new System.Drawing.Point(13, 13);
-            this.guna2PictureBox8.Name = "guna2PictureBox8";
-            this.guna2PictureBox8.Size = new System.Drawing.Size(22, 30);
-            this.guna2PictureBox8.TabIndex = 9;
-            this.guna2PictureBox8.TabStop = false;
-            // 
-            // guna2PictureBox7
-            // 
-            this.guna2PictureBox7.Image = global::Book_library_management_3.Properties.Resources.Books_ON;
-            this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(13, 13);
-            this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.Size = new System.Drawing.Size(22, 30);
-            this.guna2PictureBox7.TabIndex = 9;
-            this.guna2PictureBox7.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::Book_library_management_3.Properties.Resources.Books;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(13, 12);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(49, 38);
-            this.guna2PictureBox1.TabIndex = 7;
-            this.guna2PictureBox1.TabStop = false;
+            this.txt_wlc.AutoSize = true;
+            this.txt_wlc.BackColor = System.Drawing.Color.Transparent;
+            this.txt_wlc.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_wlc.Location = new System.Drawing.Point(33, 9);
+            this.txt_wlc.Name = "txt_wlc";
+            this.txt_wlc.Size = new System.Drawing.Size(73, 26);
+            this.txt_wlc.TabIndex = 0;
+            this.txt_wlc.Text = "Hello, ";
             // 
             // DashboardUC
             // 
@@ -804,40 +804,40 @@
             this.guna2Panel12.PerformLayout();
             this.guna2Panel13.ResumeLayout(false);
             this.guna2Panel13.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
-            this.guna2Panel14.ResumeLayout(false);
-            this.guna2Panel14.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
-            this.guna2Panel15.ResumeLayout(false);
-            this.guna2Panel15.PerformLayout();
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel4.PerformLayout();
-            this.guna2Panel16.ResumeLayout(false);
-            this.guna2Panel16.PerformLayout();
-            this.guna2Panel5.ResumeLayout(false);
-            this.guna2Panel8.ResumeLayout(false);
-            this.guna2Panel8.PerformLayout();
-            this.guna2Panel6.ResumeLayout(false);
-            this.guna2Panel7.ResumeLayout(false);
-            this.guna2Panel7.PerformLayout();
-            this.guna2Panel9.ResumeLayout(false);
-            this.guna2Panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            this.guna2Panel14.ResumeLayout(false);
+            this.guna2Panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
+            this.guna2Panel15.ResumeLayout(false);
+            this.guna2Panel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            this.guna2Panel4.ResumeLayout(false);
+            this.guna2Panel4.PerformLayout();
+            this.guna2Panel16.ResumeLayout(false);
+            this.guna2Panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            this.guna2Panel5.ResumeLayout(false);
+            this.guna2Panel8.ResumeLayout(false);
+            this.guna2Panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
+            this.guna2Panel6.ResumeLayout(false);
+            this.guna2Panel7.ResumeLayout(false);
+            this.guna2Panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
+            this.guna2Panel9.ResumeLayout(false);
+            this.guna2Panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox14)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -893,7 +893,7 @@
         private System.Windows.Forms.ListView lv_RecentMembers;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label txt_wlc;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label txt_date;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox14;
         private System.Windows.Forms.Label label17;

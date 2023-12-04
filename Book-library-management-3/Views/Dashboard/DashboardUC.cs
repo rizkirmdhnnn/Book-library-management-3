@@ -27,8 +27,10 @@ namespace Book_library_management_3.Views
             loadData();
         }
 
+
         private void loadData()
         {
+            txt_date.Text = DateTime.Now.ToString("MMM dd, yyyy | dddd, hh:mm tt");
             transactionControler = new TransactionControler();
             booksControler = new BooksControler();
             usersControler = new UsersControler();
