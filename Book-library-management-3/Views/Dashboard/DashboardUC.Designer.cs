@@ -76,11 +76,13 @@
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox14 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel17 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel18 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txt_name2 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.picture_profile = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txt_date = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txt_name = new System.Windows.Forms.Label();
             this.txt_wlc = new System.Windows.Forms.Label();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
@@ -111,7 +113,9 @@
             this.guna2Panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
             this.guna2Panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox14)).BeginInit();
+            this.guna2Panel17.SuspendLayout();
+            this.guna2Panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_profile)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel3
@@ -697,11 +701,10 @@
             // 
             // guna2Panel9
             // 
-            this.guna2Panel9.Controls.Add(this.guna2PictureBox14);
-            this.guna2Panel9.Controls.Add(this.label17);
-            this.guna2Panel9.Controls.Add(this.label6);
+            this.guna2Panel9.Controls.Add(this.guna2Panel17);
+            this.guna2Panel9.Controls.Add(this.picture_profile);
             this.guna2Panel9.Controls.Add(this.txt_date);
-            this.guna2Panel9.Controls.Add(this.label2);
+            this.guna2Panel9.Controls.Add(this.txt_name);
             this.guna2Panel9.Controls.Add(this.txt_wlc);
             this.guna2Panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel9.FillColor = System.Drawing.Color.White;
@@ -712,40 +715,60 @@
             this.guna2Panel9.Size = new System.Drawing.Size(864, 63);
             this.guna2Panel9.TabIndex = 12;
             // 
-            // guna2PictureBox14
+            // guna2Panel17
             // 
-            this.guna2PictureBox14.AutoRoundedCorners = true;
-            this.guna2PictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox14.BorderRadius = 21;
-            this.guna2PictureBox14.Image = global::Book_library_management_3.Properties.Resources.profile;
-            this.guna2PictureBox14.ImageRotate = 0F;
-            this.guna2PictureBox14.Location = new System.Drawing.Point(775, 11);
-            this.guna2PictureBox14.Name = "guna2PictureBox14";
-            this.guna2PictureBox14.Size = new System.Drawing.Size(44, 44);
-            this.guna2PictureBox14.TabIndex = 13;
-            this.guna2PictureBox14.TabStop = false;
+            this.guna2Panel17.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel17.Controls.Add(this.guna2Panel18);
+            this.guna2Panel17.Controls.Add(this.label17);
+            this.guna2Panel17.Location = new System.Drawing.Point(498, 8);
+            this.guna2Panel17.Name = "guna2Panel17";
+            this.guna2Panel17.Size = new System.Drawing.Size(271, 47);
+            this.guna2Panel17.TabIndex = 13;
+            // 
+            // guna2Panel18
+            // 
+            this.guna2Panel18.Controls.Add(this.txt_name2);
+            this.guna2Panel18.Location = new System.Drawing.Point(0, 7);
+            this.guna2Panel18.Name = "guna2Panel18";
+            this.guna2Panel18.Size = new System.Drawing.Size(269, 20);
+            this.guna2Panel18.TabIndex = 14;
+            // 
+            // txt_name2
+            // 
+            this.txt_name2.AutoSize = true;
+            this.txt_name2.BackColor = System.Drawing.Color.Transparent;
+            this.txt_name2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.txt_name2.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name2.Location = new System.Drawing.Point(196, 0);
+            this.txt_name2.Name = "txt_name2";
+            this.txt_name2.Size = new System.Drawing.Size(73, 15);
+            this.txt_name2.TabIndex = 3;
+            this.txt_name2.Text = "Aditya Alex";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(689, 32);
+            this.label17.Location = new System.Drawing.Point(188, 24);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(80, 15);
             this.label17.TabIndex = 4;
             this.label17.Text = "Administrator";
             // 
-            // label6
+            // picture_profile
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(696, 17);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 15);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Aditya Alex";
+            this.picture_profile.AutoRoundedCorners = true;
+            this.picture_profile.BackColor = System.Drawing.Color.Transparent;
+            this.picture_profile.BorderRadius = 21;
+            this.picture_profile.Image = global::Book_library_management_3.Properties.Resources.profile;
+            this.picture_profile.ImageRotate = 0F;
+            this.picture_profile.Location = new System.Drawing.Point(775, 11);
+            this.picture_profile.Name = "picture_profile";
+            this.picture_profile.Size = new System.Drawing.Size(44, 44);
+            this.picture_profile.TabIndex = 13;
+            this.picture_profile.TabStop = false;
+            this.picture_profile.Click += new System.EventHandler(this.picture_profile_Click);
             // 
             // txt_date
             // 
@@ -758,17 +781,17 @@
             this.txt_date.TabIndex = 2;
             this.txt_date.Text = "Des 04, 2023 | Monday, 11:00 AM";
             // 
-            // label2
+            // txt_name
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(136)))), ((int)(((byte)(61)))));
-            this.label2.Location = new System.Drawing.Point(98, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 26);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Alex!";
+            this.txt_name.AutoSize = true;
+            this.txt_name.BackColor = System.Drawing.Color.Transparent;
+            this.txt_name.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(136)))), ((int)(((byte)(61)))));
+            this.txt_name.Location = new System.Drawing.Point(98, 9);
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Size = new System.Drawing.Size(61, 26);
+            this.txt_name.TabIndex = 1;
+            this.txt_name.Text = "Alex!";
             // 
             // txt_wlc
             // 
@@ -837,7 +860,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
             this.guna2Panel9.ResumeLayout(false);
             this.guna2Panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox14)).EndInit();
+            this.guna2Panel17.ResumeLayout(false);
+            this.guna2Panel17.PerformLayout();
+            this.guna2Panel18.ResumeLayout(false);
+            this.guna2Panel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_profile)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -891,11 +918,13 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ListView lv_RecentBooks;
         private System.Windows.Forms.ListView lv_RecentMembers;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label txt_name;
         private System.Windows.Forms.Label txt_wlc;
         private System.Windows.Forms.Label txt_date;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox14;
+        private System.Windows.Forms.Label txt_name2;
+        private Guna.UI2.WinForms.Guna2PictureBox picture_profile;
         private System.Windows.Forms.Label label17;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel17;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel18;
     }
 }

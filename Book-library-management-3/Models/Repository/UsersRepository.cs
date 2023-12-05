@@ -49,9 +49,9 @@ namespace Book_library_management_3.Models.Repository
             return result;
         }
 
-        public int checkUserAdmin(Users users)
+        public string checkUserAdmin(Users users)
         {
-            int result = 0;
+            string result = "";
             string query = "SELECT * FROM users WHERE username = @username AND password = @password AND status = 'admin'";
             using (SQLiteCommand cmd = new SQLiteCommand(query, _connection))
             {
@@ -60,7 +60,7 @@ namespace Book_library_management_3.Models.Repository
 
                 using (SQLiteDataReader reader = cmd.ExecuteReader())
                 {
-                    if (reader.Read()) result = 1;
+                    if (reader.Read()) result = reader["name"].ToString();
                     else System.Diagnostics.Debug.Print("Username Not Found");
                 }
             }

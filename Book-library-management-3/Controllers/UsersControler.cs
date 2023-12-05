@@ -14,25 +14,25 @@ namespace Book_library_management_3.Controllers
     public class UsersControler
     {
         private usersRepository _repository;
-        public int checkUserAdmin(Users users)
+        public string checkUserAdmin(Users users)
         {
-            int result = 0;
+            string result = "";
 
             if (string.IsNullOrEmpty(users.username) && string.IsNullOrEmpty(users.password))
             {
                 MessageBox.Show("Username and Password cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0;
+                return result;
             }
 
             if (string.IsNullOrEmpty(users.username))
             {
                 MessageBox.Show("Username cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0;
+                return result;
             }
             if (string.IsNullOrEmpty(users.password))
             {
                 MessageBox.Show("Password cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0;
+                return result;
             }
 
             using(DbContext context = new DbContext())
@@ -41,13 +41,13 @@ namespace Book_library_management_3.Controllers
                 result = _repository.checkUserAdmin(users);
             }
 
-            if(result == 0)
+            if(result == "")
             {
                 MessageBox.Show("Data not found, login failed", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } else
             {
                 MessageBox.Show("Data found, login successful", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DashboardPage dashboardPage = new DashboardPage();
+                DashboardPage dashboardPage = new DashboardPage(result);
                 dashboardPage.Show();
             }
 

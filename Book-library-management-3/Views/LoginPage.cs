@@ -30,9 +30,9 @@ namespace Book_library_management_3.Views
             };
 
             UsersControler _usersControler = new UsersControler();
-            int result = _usersControler.checkUserAdmin(users);
+            string result = _usersControler.checkUserAdmin(users);
 
-            if (result > 0) this.Hide();
+            if (result != "") this.Hide();
         }
 
         private void txtBox_username_KeyDown(object sender, KeyEventArgs e)
