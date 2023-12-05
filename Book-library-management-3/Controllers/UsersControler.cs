@@ -103,17 +103,42 @@ namespace Book_library_management_3.Controllers
 
             if(result == 0)
             {
-                MessageBox.Show("Eror", "Information (Controler)", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Eror", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             } else
             {
-                MessageBox.Show("Data added successfully", "Information (Controler)", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Data added successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
 
             return result;
         }
 
+        public int deleteUser(Users users)
+        {
+            int result = 0;
+
+            using(DbContext context = new DbContext())
+            {
+                _repository = new usersRepository(context);
+                result = _repository.deleteUser(users);
+            }
+
+            return result;
+
+        }
+
+        public int updateUser(Users users)
+        {
+            int result = 0;
+            using(DbContext context = new DbContext())
+            {
+                _repository = new usersRepository(context);
+                result = _repository.updateUser(users);
+            }
+
+            return result;
+        }
         public List<Users> getUsers()
         {
             List<Users> list = new List<Users>();
