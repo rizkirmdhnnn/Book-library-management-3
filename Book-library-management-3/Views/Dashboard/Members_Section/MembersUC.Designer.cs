@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txt_admin = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
             this.txtbox_username = new Guna.UI2.WinForms.Guna2TextBox();
@@ -37,8 +39,6 @@
             this.lv_Members = new System.Windows.Forms.ListView();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.txt_admin = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel9.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +58,30 @@
             this.guna2Panel9.ShadowDecoration.Enabled = true;
             this.guna2Panel9.Size = new System.Drawing.Size(860, 63);
             this.guna2Panel9.TabIndex = 18;
+            // 
+            // txt_admin
+            // 
+            this.txt_admin.AutoSize = true;
+            this.txt_admin.BackColor = System.Drawing.Color.Transparent;
+            this.txt_admin.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_admin.Location = new System.Drawing.Point(199, 8);
+            this.txt_admin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txt_admin.Name = "txt_admin";
+            this.txt_admin.Size = new System.Drawing.Size(54, 44);
+            this.txt_admin.TabIndex = 15;
+            this.txt_admin.Text = "10";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(252, 22);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 21);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Admin";
             // 
             // guna2Panel1
             // 
@@ -140,6 +164,7 @@
             // 
             // lv_Members
             // 
+            this.lv_Members.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_Members.HideSelection = false;
             this.lv_Members.Location = new System.Drawing.Point(32, 83);
             this.lv_Members.Name = "lv_Members";
@@ -188,30 +213,6 @@
             this.guna2Button1.TabIndex = 25;
             this.guna2Button1.Text = "Edit Data";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txt_admin
-            // 
-            this.txt_admin.AutoSize = true;
-            this.txt_admin.BackColor = System.Drawing.Color.Transparent;
-            this.txt_admin.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_admin.Location = new System.Drawing.Point(199, 8);
-            this.txt_admin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txt_admin.Name = "txt_admin";
-            this.txt_admin.Size = new System.Drawing.Size(54, 44);
-            this.txt_admin.TabIndex = 15;
-            this.txt_admin.Text = "10";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(252, 22);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 21);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Admin";
             // 
             // MembersUC
             // 
