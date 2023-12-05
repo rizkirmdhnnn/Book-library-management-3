@@ -9,6 +9,7 @@ using Book_library_management_3.Models.Context;
 using Book_library_management_3.Views;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using static Guna.UI2.Native.WinApi;
 
 
 namespace Book_library_management_3.Models.Repository
@@ -49,9 +50,63 @@ namespace Book_library_management_3.Models.Repository
             return result;
         }
 
-        public int checkUserAdmin(Users users)
+        public int deleteUser(Users users)
         {
             int result = 0;
+
+            string sql = @"DELETE FROM users WHERE username = @username";
+
+            using (SQLiteCommand command = new SQLiteCommand(sql, _connection))
+            {
+                command.Parameters.AddWithValue("@username", users.username);
+
+                try
+                {
+                    result = command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.Print("Create error : {0}", ex.Message);
+                }
+            }
+            return result;
+        }
+
+        public int updateUser(Users users)
+        {
+            int result = 0;
+
+            string sql = @"UPDATE users SET username = @username, password = @password, name = @name, email = @email, status = @status, date_register = @date WHERE username = @username";
+            using (SQLiteCommand command = new SQLiteCommand(sql, _connection))
+            {
+                command.Parameters.AddWithValue("@username", users.username);
+                command.Parameters.AddWithValue("@password", users.password);
+                command.Parameters.AddWithValue("@name", users.name);
+                command.Parameters.AddWithValue("@email", users.email);
+                command.Parameters.AddWithValue("@status", users.status);
+                command.Parameters.AddWithValue("@date", users.date_register);
+
+                try
+                {
+                    result = command.ExecuteNonQuery();
+                }
+                catch (SQLiteException ex)
+                {
+                    MessageBox.Show("SQLite Error: {0}. Query: {1}", ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.Print("Create error : {0}", ex.Message);
+                }
+            }
+
+
+            return result;
+        }
+
+        public string checkUserAdmin(Users users)
+        {
+            string result = "";
             string query = "SELECT * FROM users WHERE username = @username AND password = @password AND status = 'admin'";
             using (SQLiteCommand cmd = new SQLiteCommand(query, _connection))
             {
@@ -60,7 +115,7 @@ namespace Book_library_management_3.Models.Repository
 
                 using (SQLiteDataReader reader = cmd.ExecuteReader())
                 {
-                    if (reader.Read()) result = 1;
+                    if (reader.Read()) result = reader["name"].ToString();
                     else System.Diagnostics.Debug.Print("Username Not Found");
                 }
             }

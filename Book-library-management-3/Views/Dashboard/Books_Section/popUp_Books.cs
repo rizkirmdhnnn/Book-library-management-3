@@ -15,22 +15,16 @@ namespace Book_library_management_3.Views.Dashboard.Books_Section
 {
     public partial class popUp_Books : Form
     {
-        // deklarasi tipe data untuk event OnCreate dan OnUpdate
         public delegate void CreateUpdateEventHandler(Books books);
 
-        // deklarasi event ketika terjadi proses input data baru
         public event CreateUpdateEventHandler OnCreate;
 
-        // deklarasi event ketika terjadi proses update data
         public event CreateUpdateEventHandler OnUpdate;
 
-        // deklarasi objek controller
         private BooksControler _booksControler;
 
-        // deklarasi field untuk menyimpan status entry data (input baru atau update)
         private bool isNewData = true;
 
-        // deklarasi field untuk meyimpan objek mahasiswa
         private Books _books;
 
         public popUp_Books()
@@ -59,6 +53,7 @@ namespace Book_library_management_3.Views.Dashboard.Books_Section
             isNewData = false;
             _books = books;
 
+            txtbox_Isbn.Enabled = false;
             txtbox_Isbn.Text = _books.isbn;
             txtbox_Title.Text = _books.title;
             txtbox_Writter.Text = _books.writter;
@@ -100,7 +95,8 @@ namespace Book_library_management_3.Views.Dashboard.Books_Section
 
                     txtbox_Isbn.Focus();
                 }
-            } else
+            } 
+            else
             {
                 result = _booksControler.updateBook( _books);
                 if (result > 0)
@@ -108,11 +104,6 @@ namespace Book_library_management_3.Views.Dashboard.Books_Section
                     OnUpdate(_books);
                     this.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Ada yg salah dengan controler");
-                }
-
             }
         }
 
@@ -124,6 +115,62 @@ namespace Book_library_management_3.Views.Dashboard.Books_Section
                 MessageBox.Show("Only numbers are allowed!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtbox_Stocks.Text = Regex.Replace(input, "[^0-9]", "");
                 txtbox_Stocks.SelectionStart = txtbox_Stocks.Text.Length;
+            }
+        }
+
+        private void txtbox_Isbn_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtbox_Title.Focus();
+                e.SuppressKeyPress = true;
+            }
+
+        }
+
+        private void txtbox_Title_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtbox_Writter.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtbox_Writter_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtbox_Genre.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtbox_Genre_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            { 
+                txtbox_Publisher.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtbox_Publisher_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtbox_Stocks.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtbox_Stocks_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_Save.PerformClick();
+                e.SuppressKeyPress = true;
             }
         }
     }

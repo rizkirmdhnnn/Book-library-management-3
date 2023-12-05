@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Book_library_management_3.Controllers;
 using Book_library_management_3.Models.Entity;
+using Book_library_management_3.Views.Dashboard.Profile_Section;
 
 namespace Book_library_management_3.Views
 {
@@ -26,9 +27,18 @@ namespace Book_library_management_3.Views
             InisialisasiListView();
             loadData();
         }
+        public DashboardUC(string name)
+        {
+            InitializeComponent();
+            InisialisasiListView();
+            loadData();
+            txt_name.Text = name;
+            txt_name2.Text = name;
+        }
 
         private void loadData()
         {
+            txt_date.Text = DateTime.Now.ToString("MMM dd, yyyy | dddd, hh:mm tt");
             transactionControler = new TransactionControler();
             booksControler = new BooksControler();
             usersControler = new UsersControler();
@@ -83,9 +93,11 @@ namespace Book_library_management_3.Views
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
+        private void picture_profile_Click(object sender, EventArgs e)
+        {
+            Profile profile = new Profile();
+            profile.Show();
         }
     }
 }

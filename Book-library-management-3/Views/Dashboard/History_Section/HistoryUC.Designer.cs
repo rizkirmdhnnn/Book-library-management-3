@@ -271,9 +271,12 @@
             // 
             // lv_History
             // 
-            this.lv_History.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lv_History.AutoArrange = false;
+            this.lv_History.Enabled = false;
+            this.lv_History.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_History.HideSelection = false;
             this.lv_History.Location = new System.Drawing.Point(34, 83);
+            this.lv_History.MultiSelect = false;
             this.lv_History.Name = "lv_History";
             this.lv_History.Size = new System.Drawing.Size(796, 444);
             this.lv_History.TabIndex = 16;

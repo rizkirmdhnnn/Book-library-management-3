@@ -7,15 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Book_library_management_3.Models.Entity;
 
 namespace Book_library_management_3.Views
 {
     public partial class DashboardPage : Form
     {
+        string nameGlobal = string.Empty;
         public DashboardPage()
         {
             InitializeComponent();
             DashboardUC dashboardUC = new DashboardUC();
+            addUserControl(dashboardUC);
+        }
+
+        public DashboardPage(string name)
+        {
+            InitializeComponent();
+            nameGlobal = name;
+            DashboardUC dashboardUC = new DashboardUC(nameGlobal);
             addUserControl(dashboardUC);
         }
 
@@ -49,7 +59,7 @@ namespace Book_library_management_3.Views
             btn_member.ForeColor = Color.Black;
             btn_member.Image = global::Book_library_management_3.Properties.Resources.Members;
 
-            DashboardUC dashboardUC = new DashboardUC();
+            DashboardUC dashboardUC = new DashboardUC(nameGlobal);
             addUserControl(dashboardUC);
         }
 

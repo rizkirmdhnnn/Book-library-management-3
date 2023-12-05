@@ -128,6 +128,7 @@
             this.txtbox_Stocks.Size = new System.Drawing.Size(138, 29);
             this.txtbox_Stocks.TabIndex = 10;
             this.txtbox_Stocks.TextChanged += new System.EventHandler(this.txtbox_Stocks_TextChanged);
+            this.txtbox_Stocks.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbox_Stocks_KeyDown);
             // 
             // label4
             // 
@@ -158,6 +159,7 @@
             this.txtbox_Publisher.SelectedText = "";
             this.txtbox_Publisher.Size = new System.Drawing.Size(138, 29);
             this.txtbox_Publisher.TabIndex = 8;
+            this.txtbox_Publisher.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbox_Publisher_KeyDown);
             // 
             // txtbox_Genre
             // 
@@ -178,6 +180,7 @@
             this.txtbox_Genre.SelectedText = "";
             this.txtbox_Genre.Size = new System.Drawing.Size(138, 29);
             this.txtbox_Genre.TabIndex = 7;
+            this.txtbox_Genre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbox_Genre_KeyDown);
             // 
             // label5
             // 
@@ -208,6 +211,7 @@
             this.txtbox_Writter.SelectedText = "";
             this.txtbox_Writter.Size = new System.Drawing.Size(138, 29);
             this.txtbox_Writter.TabIndex = 5;
+            this.txtbox_Writter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbox_Writter_KeyDown);
             // 
             // label3
             // 
@@ -238,6 +242,7 @@
             this.txtbox_Title.SelectedText = "";
             this.txtbox_Title.Size = new System.Drawing.Size(138, 29);
             this.txtbox_Title.TabIndex = 3;
+            this.txtbox_Title.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbox_Title_KeyDown);
             // 
             // label2
             // 
@@ -268,6 +273,7 @@
             this.txtbox_Isbn.SelectedText = "";
             this.txtbox_Isbn.Size = new System.Drawing.Size(138, 29);
             this.txtbox_Isbn.TabIndex = 1;
+            this.txtbox_Isbn.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbox_Isbn_KeyDown);
             // 
             // label1
             // 
