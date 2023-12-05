@@ -108,6 +108,12 @@
     <Compile Include="Views\Dashboard\Members_Section\MembersUC.Designer.cs">
       <DependentUpon>MembersUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Dashboard\Members_Section\popUp_Members.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\Members_Section\popUp_Members.Designer.cs">
+      <DependentUpon>popUp_Members.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Dashboard\Profile_Section\Profile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Dashboard\Members_Section\MembersUC.resx">
       <DependentUpon>MembersUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dashboard\Members_Section\popUp_Members.resx">
+      <DependentUpon>popUp_Members.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Dashboard\Profile_Section\Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
