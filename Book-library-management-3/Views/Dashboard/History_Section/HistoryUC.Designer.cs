@@ -139,6 +139,7 @@
             this.txtbox_username.SelectedText = "";
             this.txtbox_username.Size = new System.Drawing.Size(202, 32);
             this.txtbox_username.TabIndex = 2;
+            this.txtbox_username.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // guna2Button2
             // 
