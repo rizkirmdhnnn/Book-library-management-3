@@ -301,5 +301,25 @@ namespace Book_library_management_3.Models.Repository
             return list;
 
         }
+
+        public AutoCompleteStringCollection getUsername()
+        {
+            string sql = @"SELECT username from users";
+            AutoCompleteStringCollection autoComplete = new AutoCompleteStringCollection();
+
+            using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
+            {
+                using (SQLiteDataReader dtr = cmd.ExecuteReader())
+                {
+                    while (dtr.Read())
+                    {
+                        autoComplete.Add(dtr.GetString(0));
+                    }
+                }
+
+            }
+            return autoComplete;
+
+        }
     }
 }

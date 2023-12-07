@@ -7,7 +7,6 @@ using Book_library_management_3.Models.Repository;
 using Book_library_management_3.Models.Entity;
 using Book_library_management_3.Models.Context;
 using System.Windows.Forms;
-using static Guna.UI2.Native.WinApi;
 
 namespace Book_library_management_3.Controllers
 {
@@ -19,12 +18,6 @@ namespace Book_library_management_3.Controllers
         public int borrowingBook(Transactions transactions)
         {
             int result = 0;
-
-            if (transactions.transactions_id == default(int))
-            {
-                MessageBox.Show("TransactionID cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0;
-            }
 
             if (string.IsNullOrEmpty(transactions.isbn))
             {
@@ -54,6 +47,19 @@ namespace Book_library_management_3.Controllers
             {
                 _repository = new transactionsRepository(context);
                 result = _repository.borrowingBook(transactions);
+            }
+
+            return result;
+        }
+
+        public int getTransaction_id()
+        {
+            int result = 0;
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new transactionsRepository(context);
+                result = _repository.getTransaction_id();
             }
 
             return result;

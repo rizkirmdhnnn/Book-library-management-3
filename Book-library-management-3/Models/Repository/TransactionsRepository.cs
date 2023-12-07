@@ -10,6 +10,8 @@ using Book_library_management_3.Models.Entity;
 using Book_library_management_3.Models.Context;
 using Book_library_management_3.Models.Repository;
 using System.Net.Configuration;
+using System.Windows.Forms;
+using System.Data.SqlClient;
 
 
 namespace Book_library_management_3.Models.Repository
@@ -26,7 +28,7 @@ namespace Book_library_management_3.Models.Repository
         {
             int result = 0;
             string sqlCheckUserBorrowing = @"SELECT username, isbn, date  FROM transactions WHERE username = @username AND isbn = @isbn AND status = 'Peminjaman'";
-            string sqlInsert = @"INSERT INTO transactions (transaction_id, username, isbn, date, status) VALUES  (@transaction_id, @username, @isbn, @date, @status)";
+            string sqlInsert = @"INSERT INTO transactions (username, isbn, date, status) VALUES  (@username, @isbn, @date, @status)";
             string sqlCheckStock = @"SELECT stocks FROM books WHERE isbn = @isbn";
 
             using (SQLiteCommand checkUserBorrowing = new SQLiteCommand(sqlCheckUserBorrowing, _connection))
@@ -37,32 +39,42 @@ namespace Book_library_management_3.Models.Repository
 
                 object resultObj = checkUserBorrowing.ExecuteScalar();
 
+
                 if (resultObj != null) // Jika baris ditemukan, buku masih dipinjam
                 {
                     result = 00;
+                    MessageBox.Show("Buku Masih Dipinjam");
                     return result;
                 } else
                 {
                     using (SQLiteCommand checkStock = new SQLiteCommand(sqlCheckStock, _connection))
                     {
                         checkStock.Parameters.AddWithValue("@isbn", transactions.isbn);
+                        int stock = 0;
 
-                        int stock = (int)checkStock.ExecuteScalar();
+                        using(SQLiteDataReader dtr = checkStock.ExecuteReader())
+                        {
+                            while (dtr.Read()) {
+                                stock = dtr.GetInt32(0);
+                            }
+                        }
+
+                        MessageBox.Show(stock.ToString());
 
                         if (stock > 0)
                         {
 
                             using (SQLiteCommand command = new SQLiteCommand(sqlInsert, _connection))
                             {
-                                command.Parameters.AddWithValue("@transaction_id", transactions.transactions_id);
                                 command.Parameters.AddWithValue("@username", transactions.username);
                                 command.Parameters.AddWithValue("@isbn", transactions.isbn);
-                                command.Parameters.AddWithValue("@date", DateTime.Now);
+                                command.Parameters.AddWithValue("@date", transactions.date);
                                 command.Parameters.AddWithValue("@status", "Peminjaman");
 
                                 try
                                 {
                                     result = command.ExecuteNonQuery();
+
                                 }
                                 catch (Exception ex)
                                 {
@@ -75,21 +87,65 @@ namespace Book_library_management_3.Models.Repository
 
                 }
             }
+            MessageBox.Show("Berhasil Meminjam Buku" + result.ToString());
+            if (result == 1){
 
-            if (result !=0 || result != 00){
-
+                //Mengurangi Stocks
                 Books book = new Books();
                 book.isbn = transactions.isbn;
                 using (DbContext context = new DbContext())
                 {
                     var books = new BooksRepository(context);
-                    books.updateStocksBooks(book, "-");
+                    int p = books.updateStocksBooks(book, '-');
+
+                    MessageBox.Show("Berhasil Mengurangi Stock" + p.ToString());
                 }
+
+                //Membuat history
+                History history = new History();
+                using (DbContext context = new DbContext())
+                {
+                    var transaction_id = new transactionsRepository(context);
+                    history.transactions_id = transaction_id.getTransaction_id();
+
+                    using (DbContext transaction_context = new DbContext())
+                    {
+                        var _history = new HistoryRepository(transaction_context);
+                        int hasil = _history.addHistory(history);
+                        MessageBox.Show("Hasil tambah history : " + hasil.ToString());
+                    }
+                }
+
             }
 
             return result;
         }
+        
 
+        public int getTransaction_id()
+        {
+            int result = 0;
+            try
+            {
+                string sql = @"SELECT transaction_id FROM transactions ORDER BY date DESC LIMIT 1;";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
+                {
+                    using (SQLiteDataReader dtr = cmd.ExecuteReader())
+                    {
+                        while (dtr.Read())
+                        {
+                            result = dtr.GetInt32(0);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print("getAllTransactions error: {0}", ex.Message);
+            }
+            return result;
+        }
         public int returnBook(Transactions transactions)
         {
 
@@ -102,7 +158,7 @@ namespace Book_library_management_3.Models.Repository
                 command.Parameters.AddWithValue("@transaction_id", transactions.transactions_id);
                 command.Parameters.AddWithValue("@username", transactions.username);
                 command.Parameters.AddWithValue("@isbn", transactions.isbn);
-                command.Parameters.AddWithValue("@date", DateTime.Now);
+                command.Parameters.AddWithValue("@date", transactions.date);
                 command.Parameters.AddWithValue("@status", "Pengembalian");
 
                 try
@@ -123,7 +179,7 @@ namespace Book_library_management_3.Models.Repository
                 using (DbContext context = new DbContext())
                 {
                     var books = new BooksRepository(context);
-                    books.updateStocksBooks(book, "+");
+                    books.updateStocksBooks(book, '+');
                 }
             }
 
@@ -138,7 +194,15 @@ namespace Book_library_management_3.Models.Repository
             try
             {
                 // deklarasi perintah SQL
-                string sql = @"SELECT * FROM transaction";
+                string sql = @"SELECT  
+                                    transactions.username, 
+                                    books.title,	
+                                    transactions.isbn, 
+                                    transactions.date  
+                                FROM 
+                                    transactions
+                                JOIN 
+                                    books ON transactions.isbn = books.isbn";
                 // membuat objek command menggunakan blok using
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
                 {
@@ -150,11 +214,10 @@ namespace Book_library_management_3.Models.Repository
                         {
                             // proses konversi dari row result set ke object
                             Transactions trx = new Transactions();
-                            trx.transactions_id = (int)dtr["transaction_id"];
                             trx.username = dtr["username"].ToString();
+                            trx.title = dtr["title"].ToString();
                             trx.isbn = dtr["isbn"].ToString();
                             trx.date = dtr["date"].ToString();
-                            trx.status = dtr["status"].ToString();
                             list.Add(trx);
                         }
                     }

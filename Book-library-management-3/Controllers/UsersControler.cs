@@ -214,5 +214,18 @@ namespace Book_library_management_3.Controllers
 
             return list;
         }
+
+        public AutoCompleteStringCollection getUsername()
+        {
+            AutoCompleteStringCollection autoComplete = new AutoCompleteStringCollection();
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new usersRepository(context);
+                autoComplete = _repository.getUsername();
+            }
+
+            return autoComplete;
+        }
     }
 }
