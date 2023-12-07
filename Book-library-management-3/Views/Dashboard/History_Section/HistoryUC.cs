@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Book_library_management_3.Models.Entity;
 using Book_library_management_3.Controllers;
+using Microsoft.Office.Interop.Excel;
 
 
 namespace Book_library_management_3.Views
@@ -77,6 +78,40 @@ namespace Book_library_management_3.Views
                 item.SubItems.Add(history.date);
                 lv_History.Items.Add(item);
 
+            }
+        }
+
+        private void btn_Export_Click(object sender, EventArgs e)
+        {
+            using(SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xls", ValidateNames = true })
+            {
+                if(sfd.ShowDialog() == DialogResult.OK)
+                {
+                    Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
+                    Workbook wb = app.Workbooks.Add(XlSheetType.xlWorksheet);
+                    Worksheet ws = (Worksheet)app.ActiveSheet;
+
+                    app.Visible = false;
+                    for (int j = 1; j <= lv_History.Columns.Count; j++)
+                    {
+                        var newWidth = Math.Min(255, lv_History.Columns[j - 1].Width / 2);
+                        ws.Columns[j].ColumnWidth = newWidth;
+                        ws.Cells[1, j] = lv_History.Columns[j - 1].Text;
+                    }
+                    int i = 2;
+                    foreach (ListViewItem item in lv_History.Items)
+                    {
+                        for (int k = 1; k <= item.SubItems.Count; k++)
+                        {
+                            ws.Cells[i, k] = item.SubItems[k - 1].Text;
+                        }
+                        i++;
+                    }
+                    wb.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlLocalSessionChanges, Type.Missing, Type.Missing);
+                    app.Quit();
+                    MessageBox.Show("Exported Successfully.");
+
+                }
             }
         }
     }
