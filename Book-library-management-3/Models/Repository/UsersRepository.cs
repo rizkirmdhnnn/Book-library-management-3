@@ -321,5 +321,21 @@ namespace Book_library_management_3.Models.Repository
             return autoComplete;
 
         }
+
+        public string getEmailByUsername(string name)
+        {
+            string result = "";
+            string query = "SELECT email FROM users WHERE name = @name";
+            using (SQLiteCommand cmd = new SQLiteCommand(query, _connection))
+            {
+                cmd.Parameters.AddWithValue("@name", name);
+
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read()) result = reader.GetString(0);
+                }
+            }
+            return result;
+        }
     }
 }

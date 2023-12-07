@@ -153,6 +153,26 @@ namespace Book_library_management_3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Edit1 {
+            get {
+                object obj = ResourceManager.GetObject("Edit1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Edit2 {
+            get {
+                object obj = ResourceManager.GetObject("Edit2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap History {
             get {
                 object obj = ResourceManager.GetObject("History", resourceCulture);
@@ -216,6 +236,16 @@ namespace Book_library_management_3.Properties {
         internal static System.Drawing.Bitmap profile {
             get {
                 object obj = ResourceManager.GetObject("profile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap profile_90x90 {
+            get {
+                object obj = ResourceManager.GetObject("profile_90x90", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
