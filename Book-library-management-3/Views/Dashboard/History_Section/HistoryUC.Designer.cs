@@ -42,6 +42,7 @@
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.lv_History = new System.Windows.Forms.ListView();
+            this.btn_Export = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel9.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -52,6 +53,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.btn_Export);
             this.guna2Panel1.Controls.Add(this.guna2Panel9);
             this.guna2Panel1.Controls.Add(this.lv_History);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -283,6 +285,28 @@
             this.lv_History.TabIndex = 16;
             this.lv_History.UseCompatibleStateImageBehavior = false;
             // 
+            // btn_Export
+            // 
+            this.btn_Export.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Export.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.btn_Export.BorderRadius = 8;
+            this.btn_Export.BorderThickness = 1;
+            this.btn_Export.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Export.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Export.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Export.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Export.FillColor = System.Drawing.Color.Transparent;
+            this.btn_Export.Font = new System.Drawing.Font("Montserrat SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Export.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Export.Location = new System.Drawing.Point(687, 533);
+            this.btn_Export.Name = "btn_Export";
+            this.btn_Export.PressedColor = System.Drawing.Color.Transparent;
+            this.btn_Export.Size = new System.Drawing.Size(143, 32);
+            this.btn_Export.TabIndex = 26;
+            this.btn_Export.Text = "Export To Excel";
+            this.btn_Export.TextFormatNoPrefix = true;
+            this.btn_Export.Click += new System.EventHandler(this.btn_Export_Click);
+            // 
             // HistoryUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,5 +340,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2Button btn_add;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2Button btn_Export;
     }
 }
