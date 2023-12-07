@@ -13,5 +13,6 @@ namespace Book_library_management_3.Models.Entity
         public string isbn { get; set; }
         public string date { get; set; }
         public string status { get; set; }
+        public string title { get; set; }
     }
 }

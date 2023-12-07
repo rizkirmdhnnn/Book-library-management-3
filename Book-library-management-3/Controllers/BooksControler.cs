@@ -117,7 +117,7 @@ namespace Book_library_management_3.Controllers
             return result;
         }
 
-        public int updateStocksBooks(Books  books, string IncreseOrDecrease)
+        public int updateStocksBooks(Books  books, char IncreseOrDecrease)
         {
             int result = 0;
 
@@ -192,6 +192,46 @@ namespace Book_library_management_3.Controllers
             }
 
             return list;
+        }
+
+        public AutoCompleteStringCollection getTitle()
+        {
+            AutoCompleteStringCollection autoComplete = new AutoCompleteStringCollection();
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new BooksRepository(context);
+                autoComplete = _repository.getTitle();
+            }
+
+            return autoComplete;
+        }
+
+        public string getDetileBookByTitle(Books books)
+        {
+            string result;
+
+            using(DbContext context = new DbContext())
+            {
+                _repository = new BooksRepository(context);
+                result = _repository.getDetileBookByTitle(books);
+            }
+
+            return result;
+        }
+
+
+        public string getIsbnByTitle(Books books)
+        {
+            string result;
+
+            using (DbContext context = new DbContext())
+            {
+                _repository = new BooksRepository(context);
+                result = _repository.getIsbnBYTitle(books);
+            }
+
+            return result;
         }
     }
 }

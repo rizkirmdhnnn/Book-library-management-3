@@ -84,19 +84,19 @@ namespace Book_library_management_3.Models.Repository
             return result;
         }
 
-        public int updateStocksBooks(Books books, string IncreseOrDecrease)
+        public int updateStocksBooks(Books books, char IncreseOrDecrease)
         {
             int result = 0;
             string sqlUpdateBook = "";
 
-            if (IncreseOrDecrease == "+")
+            if (IncreseOrDecrease == '+')
             {
-                sqlUpdateBook = @"UPDATE books SET stock = stock + 1 WHERE isbn = @isbn";
+                sqlUpdateBook = @"UPDATE books SET stocks = stocks + 1 WHERE isbn = @isbn";
             }
             
-            if (IncreseOrDecrease == "-")
+            if (IncreseOrDecrease == '-')
             {
-                sqlUpdateBook = @"UPDATE books SET stock = stock - 1 WHERE isbn = @isbn";
+                sqlUpdateBook = @"UPDATE books SET stocks = stocks - 1 WHERE isbn = @isbn";
             }
 
             using (SQLiteCommand updateCommand = new SQLiteCommand(sqlUpdateBook, _connection))
@@ -261,6 +261,68 @@ namespace Book_library_management_3.Models.Repository
             }
 
             return list;
+        }
+
+        public AutoCompleteStringCollection getTitle()
+        {
+            string sql = @"SELECT title from books";
+            AutoCompleteStringCollection autoComplete = new AutoCompleteStringCollection();
+
+            using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
+            {
+                using (SQLiteDataReader dtr = cmd.ExecuteReader())
+                {
+                    while (dtr.Read())
+                    {
+                        autoComplete.Add(dtr.GetString(0));
+                    }
+                }
+
+            }
+            return autoComplete;
+
+        }
+
+        public string getDetileBookByTitle(Books books)
+        {
+            string result = "";
+            string sql = @"SELECT * FROM books WHERE title = @title";
+            
+            using(SQLiteCommand cmd = new SQLiteCommand(sql,_connection))
+            {
+                cmd.Parameters.AddWithValue("@title", books.title);
+                using(SQLiteDataReader dtr = cmd.ExecuteReader())
+                {
+                    while (dtr.Read())
+                    {
+                        
+                        result = "Title : " + dtr.GetString(0) + "\rWritter : " + dtr.GetString(1) + "\rISBN : " + dtr.GetString(2) + "\rGenre : " + dtr.GetString(3) + "\rPublisher : " + dtr.GetString(4) + "\rStocks : " + dtr.GetInt32(5);
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        public string getIsbnBYTitle(Books books)
+        {
+            string result = "";
+            string sql = @"SELECT isbn FROM books WHERE title = @title";
+
+            using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
+            {
+                cmd.Parameters.AddWithValue("@title", books.title);
+                using (SQLiteDataReader dtr = cmd.ExecuteReader())
+                {
+                    while (dtr.Read())
+                    {
+
+                        result = dtr.GetString(0); ;
+                    }
+                }
+            }
+
+            return result;
         }
     }
 }

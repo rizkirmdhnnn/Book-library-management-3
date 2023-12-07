@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Book_library_management_3.Models.Repository;
 using Book_library_management_3.Models.Entity;
 using Book_library_management_3.Models.Context;
+using System.Web.Management;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Book_library_management_3.Controllers
 {
@@ -40,6 +42,17 @@ namespace Book_library_management_3.Controllers
             }
 
             return list;
+        }
+
+        public int addHistory(History history)
+        {
+            int result = 0;
+            using(DbContext context = new DbContext())
+            {
+                _repository = new HistoryRepository(context);
+                result = _repository.addHistory(history);
+            }
+            return result;
         }
     }
 }
