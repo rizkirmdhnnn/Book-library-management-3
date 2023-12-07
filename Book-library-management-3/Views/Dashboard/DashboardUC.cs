@@ -20,7 +20,7 @@ namespace Book_library_management_3.Views
         private UsersControler usersControler;
         private List<Users> listRecentMembers = new List<Users>();
         private List<Books> listRecentBooks = new List<Books>();
-
+        private string _name;
         public DashboardUC()
         {
             InitializeComponent();
@@ -32,6 +32,7 @@ namespace Book_library_management_3.Views
             InitializeComponent();
             InisialisasiListView();
             loadData();
+            _name = name;
             txt_name.Text = name;
             txt_name2.Text = name;
         }
@@ -96,7 +97,7 @@ namespace Book_library_management_3.Views
 
         private void picture_profile_Click(object sender, EventArgs e)
         {
-            Profile profile = new Profile();
+            Profile profile = new Profile(_name);
             profile.Show();
         }
     }

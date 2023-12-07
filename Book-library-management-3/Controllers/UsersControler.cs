@@ -227,5 +227,16 @@ namespace Book_library_management_3.Controllers
 
             return autoComplete;
         }
+
+        public string getEmailByUsername(string name)
+        {
+            string result = "";
+            using (DbContext context = new DbContext())
+            {
+                _repository = new usersRepository(context);
+                result = _repository.getEmailByUsername(name);
+            }
+            return result;
+        }
     }
 }
