@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_return = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtbox_username = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lv_History = new System.Windows.Forms.ListView();
-            this.Kembaliin = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Lv_Transactions = new System.Windows.Forms.ListView();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel9.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -53,14 +53,37 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.Kembaliin);
+            this.guna2Panel1.Controls.Add(this.btn_return);
             this.guna2Panel1.Controls.Add(this.guna2Panel9);
-            this.guna2Panel1.Controls.Add(this.lv_History);
+            this.guna2Panel1.Controls.Add(this.Lv_Transactions);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(860, 582);
             this.guna2Panel1.TabIndex = 17;
+            // 
+            // btn_return
+            // 
+            this.btn_return.BackColor = System.Drawing.Color.Transparent;
+            this.btn_return.BorderRadius = 8;
+            this.btn_return.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_return.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_return.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_return.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_return.FillColor = System.Drawing.Color.Transparent;
+            this.btn_return.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.btn_return.ForeColor = System.Drawing.Color.Black;
+            this.btn_return.Image = global::Book_library_management_3.Properties.Resources.Book_Return;
+            this.btn_return.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btn_return.ImageSize = new System.Drawing.Size(27, 27);
+            this.btn_return.Location = new System.Drawing.Point(699, 532);
+            this.btn_return.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_return.Name = "btn_return";
+            this.btn_return.Size = new System.Drawing.Size(122, 31);
+            this.btn_return.TabIndex = 27;
+            this.btn_return.Text = "Kembalikan";
+            this.btn_return.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_return.Click += new System.EventHandler(this.btn_return_Click);
             // 
             // guna2Panel9
             // 
@@ -141,6 +164,28 @@
             this.txtbox_username.SelectedText = "";
             this.txtbox_username.Size = new System.Drawing.Size(202, 32);
             this.txtbox_username.TabIndex = 2;
+            this.txtbox_username.TextChanged += new System.EventHandler(this.txtbox_username_TextChanged);
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 8;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button2.Image = global::Book_library_management_3.Properties.Resources.Add_Option;
+            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.guna2Button2.Location = new System.Drawing.Point(273, 17);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(81, 31);
+            this.guna2Button2.TabIndex = 10;
+            this.guna2Button2.Text = "Add";
+            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // guna2TextBox3
             // 
@@ -164,6 +209,27 @@
             this.guna2TextBox3.Size = new System.Drawing.Size(202, 32);
             this.guna2TextBox3.TabIndex = 2;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 8;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Image = global::Book_library_management_3.Properties.Resources.Add_Option;
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.guna2Button1.Location = new System.Drawing.Point(273, 17);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(81, 31);
+            this.guna2Button1.TabIndex = 10;
+            this.guna2Button1.Text = "Add";
+            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // guna2TextBox2
             // 
             this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
@@ -185,6 +251,27 @@
             this.guna2TextBox2.SelectedText = "";
             this.guna2TextBox2.Size = new System.Drawing.Size(202, 32);
             this.guna2TextBox2.TabIndex = 2;
+            // 
+            // btn_add
+            // 
+            this.btn_add.BackColor = System.Drawing.Color.Transparent;
+            this.btn_add.BorderRadius = 8;
+            this.btn_add.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_add.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_add.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_add.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_add.FillColor = System.Drawing.Color.Transparent;
+            this.btn_add.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.ForeColor = System.Drawing.Color.Black;
+            this.btn_add.Image = global::Book_library_management_3.Properties.Resources.Add_Option;
+            this.btn_add.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btn_add.Location = new System.Drawing.Point(273, 17);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(81, 31);
+            this.btn_add.TabIndex = 10;
+            this.btn_add.Text = "Add";
+            this.btn_add.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // guna2TextBox1
             // 
@@ -208,100 +295,15 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(202, 32);
             this.guna2TextBox1.TabIndex = 2;
             // 
-            // lv_History
+            // Lv_Transactions
             // 
-            this.lv_History.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lv_History.HideSelection = false;
-            this.lv_History.Location = new System.Drawing.Point(34, 83);
-            this.lv_History.Name = "lv_History";
-            this.lv_History.Size = new System.Drawing.Size(796, 444);
-            this.lv_History.TabIndex = 16;
-            this.lv_History.UseCompatibleStateImageBehavior = false;
-            // 
-            // Kembaliin
-            // 
-            this.Kembaliin.BackColor = System.Drawing.Color.Transparent;
-            this.Kembaliin.BorderRadius = 8;
-            this.Kembaliin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Kembaliin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Kembaliin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Kembaliin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Kembaliin.FillColor = System.Drawing.Color.Transparent;
-            this.Kembaliin.Font = new System.Drawing.Font("Montserrat", 9F);
-            this.Kembaliin.ForeColor = System.Drawing.Color.Black;
-            this.Kembaliin.Image = global::Book_library_management_3.Properties.Resources.Book_Return;
-            this.Kembaliin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Kembaliin.ImageSize = new System.Drawing.Size(27, 27);
-            this.Kembaliin.Location = new System.Drawing.Point(699, 532);
-            this.Kembaliin.Margin = new System.Windows.Forms.Padding(2);
-            this.Kembaliin.Name = "Kembaliin";
-            this.Kembaliin.Size = new System.Drawing.Size(122, 31);
-            this.Kembaliin.TabIndex = 27;
-            this.Kembaliin.Text = "Kembalikan";
-            this.Kembaliin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 8;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Image = global::Book_library_management_3.Properties.Resources.Add_Option;
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button2.Location = new System.Drawing.Point(273, 17);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(81, 31);
-            this.guna2Button2.TabIndex = 10;
-            this.guna2Button2.Text = "Add";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 8;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Image = global::Book_library_management_3.Properties.Resources.Add_Option;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button1.Location = new System.Drawing.Point(273, 17);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(81, 31);
-            this.guna2Button1.TabIndex = 10;
-            this.guna2Button1.Text = "Add";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // btn_add
-            // 
-            this.btn_add.BackColor = System.Drawing.Color.Transparent;
-            this.btn_add.BorderRadius = 8;
-            this.btn_add.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_add.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_add.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_add.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_add.FillColor = System.Drawing.Color.Transparent;
-            this.btn_add.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.ForeColor = System.Drawing.Color.Black;
-            this.btn_add.Image = global::Book_library_management_3.Properties.Resources.Add_Option;
-            this.btn_add.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btn_add.Location = new System.Drawing.Point(273, 17);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(81, 31);
-            this.btn_add.TabIndex = 10;
-            this.btn_add.Text = "Add";
-            this.btn_add.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Lv_Transactions.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lv_Transactions.HideSelection = false;
+            this.Lv_Transactions.Location = new System.Drawing.Point(34, 83);
+            this.Lv_Transactions.Name = "Lv_Transactions";
+            this.Lv_Transactions.Size = new System.Drawing.Size(796, 444);
+            this.Lv_Transactions.TabIndex = 16;
+            this.Lv_Transactions.UseCompatibleStateImageBehavior = false;
             // 
             // ReturnUC
             // 
@@ -335,7 +337,7 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2Button btn_add;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.ListView lv_History;
-        private Guna.UI2.WinForms.Guna2Button Kembaliin;
+        private System.Windows.Forms.ListView Lv_Transactions;
+        private Guna.UI2.WinForms.Guna2Button btn_return;
     }
 }

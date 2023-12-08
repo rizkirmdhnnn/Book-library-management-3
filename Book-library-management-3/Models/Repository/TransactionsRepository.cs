@@ -151,19 +151,20 @@ namespace Book_library_management_3.Models.Repository
 
             int result = 0;
 
-            string sql = @"insert into transactions (transaction_id, username, isbn, date, status) values  (@transaction_id, @username, @isbn, @date, @status)";
+            string sql = @"UPDATE transactions SET status = 'Done' WHERE username = @username AND isbn = @isbn AND status = 'Peminjaman';";
 
             using (SQLiteCommand command = new SQLiteCommand(sql, _connection))
             {
-                command.Parameters.AddWithValue("@transaction_id", transactions.transactions_id);
                 command.Parameters.AddWithValue("@username", transactions.username);
                 command.Parameters.AddWithValue("@isbn", transactions.isbn);
-                command.Parameters.AddWithValue("@date", transactions.date);
-                command.Parameters.AddWithValue("@status", "Pengembalian");
 
                 try
                 {
                     result = command.ExecuteNonQuery();
+                }
+                catch (SQLiteException ex)
+                {
+                    MessageBox.Show("SQLite Error: {0}. Query: {1}", ex.Message);
                 }
                 catch (Exception ex)
                 {
@@ -180,6 +181,21 @@ namespace Book_library_management_3.Models.Repository
                 {
                     var books = new BooksRepository(context);
                     books.updateStocksBooks(book, '+');
+                }
+
+                //Membuat history
+                History history = new History();
+                using (DbContext context = new DbContext())
+                {
+                    var transaction_id = new transactionsRepository(context);
+                    history.transactions_id = transaction_id.getTransaction_id();
+
+                    using (DbContext transaction_context = new DbContext())
+                    {
+                        var _history = new HistoryRepository(transaction_context);
+                        int hasil = _history.addHistory(history);
+                        MessageBox.Show("Hasil tambah history : " + hasil.ToString());
+                    }
                 }
             }
 
@@ -202,7 +218,9 @@ namespace Book_library_management_3.Models.Repository
                                 FROM 
                                     transactions
                                 JOIN 
-                                    books ON transactions.isbn = books.isbn";
+                                    books ON transactions.isbn = books.isbn
+                                WHERE
+                                    status = 'Peminjaman'";
                 // membuat objek command menggunakan blok using
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
                 {
@@ -233,41 +251,51 @@ namespace Book_library_management_3.Models.Repository
 
         public List<Transactions> getTransactionByUsername(string username)
         {
-            // membuat objek collection untuk menampung objek mahasiswa
             List<Transactions> list = new List<Transactions>();
             try
             {
-                // deklarasi perintah SQL
-                string sql = @"SELECT * FROM transactions WHERE username = @username";
-                // membuat objek command menggunakan blok using
+                string sql = @"SELECT  
+                                    transactions.username, 
+                                    books.title,	
+                                    transactions.isbn, 
+                                    transactions.date  
+                                FROM 
+                                    transactions
+                                JOIN 
+                                    books ON transactions.isbn = books.isbn
+                                WHERE 
+                                    username LIKE @username";
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
                 {
-                    // mendaftarkan parameter dan mengeset nilainya
-                    cmd.Parameters.AddWithValue("@username", username);
-                    // membuat objek dtr (data reader) untuk menampung result set (hasil perintah SELECT)
+                    cmd.Parameters.AddWithValue("@username", username + '%');
+                    // membuat objek dtr (data reader) untuk menampung result  (hasil perintah SELECT)
                     using (SQLiteDataReader dtr = cmd.ExecuteReader())
                     {
-                        // panggil method Read untuk mendapatkan baris dari result set
+
+                        // panggil method Read untuk mendapatkan baris dari set
                         while (dtr.Read())
                         {
                             // proses konversi dari row result set ke object
                             Transactions trx = new Transactions();
-                            trx.transactions_id = (int)dtr["transaction_id"];
                             trx.username = dtr["username"].ToString();
+                            trx.title = dtr["title"].ToString();
                             trx.isbn = dtr["isbn"].ToString();
                             trx.date = dtr["date"].ToString();
-                            trx.status = dtr["status"].ToString();
                             list.Add(trx);
                         }
                     }
                 }
+             
+
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.Print("getTransactionByUsername error: {0}",
-               ex.Message);
+                System.Diagnostics.Debug.Print("getAllTransactions error: {0}", ex.Message);
+
             }
+
             return list;
+
         }
 
         public List<Transactions> getBorrowingByUsername(string username)
