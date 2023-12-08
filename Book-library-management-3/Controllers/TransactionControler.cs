@@ -69,12 +69,6 @@ namespace Book_library_management_3.Controllers
         {
             int result = 0;
 
-            if (transactions.transactions_id == default(int))
-            {
-                MessageBox.Show("TransactionID cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0;
-            }
-
             if (string.IsNullOrEmpty(transactions.isbn))
             {
                 MessageBox.Show("ISBN cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -87,11 +81,6 @@ namespace Book_library_management_3.Controllers
                 return 0;
             }
 
-            if (string.IsNullOrEmpty(transactions.status))
-            {
-                MessageBox.Show("Status cannot be empty", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0;
-            }
 
             using (DbContext context = new DbContext())
             {
