@@ -32,24 +32,26 @@
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btn_SearchBook = new Guna.UI2.WinForms.Guna2Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.txtbox_date = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtbox_books = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtbox_username = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Lv_Transactions = new System.Windows.Forms.ListView();
             this.label5 = new System.Windows.Forms.Label();
+            this.Lv_Transactions = new System.Windows.Forms.ListView();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_SearchBook = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.txtbox_username = new Guna.UI2.WinForms.Guna2TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtbox_date = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtbox_books = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel9.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            this.guna2Panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel9
@@ -72,7 +74,7 @@
             this.label2.Location = new System.Drawing.Point(24, 12);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 30);
+            this.label2.Size = new System.Drawing.Size(162, 30);
             this.label2.TabIndex = 9;
             this.label2.Text = "Transactions";
             // 
@@ -99,6 +101,70 @@
             this.guna2Panel2.Size = new System.Drawing.Size(808, 452);
             this.guna2Panel2.TabIndex = 0;
             // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.BorderRadius = 8;
+            this.guna2Panel4.Controls.Add(this.guna2Panel5);
+            this.guna2Panel4.Controls.Add(this.Lv_Transactions);
+            this.guna2Panel4.FillColor = System.Drawing.Color.White;
+            this.guna2Panel4.Location = new System.Drawing.Point(409, 0);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(399, 452);
+            this.guna2Panel4.TabIndex = 77;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(72, 11);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(257, 26);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "All Lending Transactions";
+            // 
+            // Lv_Transactions
+            // 
+            this.Lv_Transactions.HideSelection = false;
+            this.Lv_Transactions.Location = new System.Drawing.Point(12, 64);
+            this.Lv_Transactions.Name = "Lv_Transactions";
+            this.Lv_Transactions.Size = new System.Drawing.Size(374, 375);
+            this.Lv_Transactions.TabIndex = 0;
+            this.Lv_Transactions.UseCompatibleStateImageBehavior = false;
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BorderRadius = 8;
+            this.guna2Panel3.Controls.Add(this.label1);
+            this.guna2Panel3.Controls.Add(this.btn_SearchBook);
+            this.guna2Panel3.Controls.Add(this.btnSave);
+            this.guna2Panel3.Controls.Add(this.txtbox_username);
+            this.guna2Panel3.Controls.Add(this.richTextBox1);
+            this.guna2Panel3.Controls.Add(this.label3);
+            this.guna2Panel3.Controls.Add(this.txtbox_date);
+            this.guna2Panel3.Controls.Add(this.txtbox_books);
+            this.guna2Panel3.Controls.Add(this.label4);
+            this.guna2Panel3.FillColor = System.Drawing.Color.White;
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(403, 452);
+            this.guna2Panel3.TabIndex = 76;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(74, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 17);
+            this.label1.TabIndex = 62;
+            this.label1.Text = "Username";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // btn_SearchBook
             // 
             this.btn_SearchBook.BackColor = System.Drawing.Color.Transparent;
@@ -121,88 +187,23 @@
             this.btn_SearchBook.TextFormatNoPrefix = true;
             this.btn_SearchBook.Click += new System.EventHandler(this.btn_SearchBook_Click);
             // 
-            // richTextBox1
+            // btnSave
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Enabled = false;
-            this.richTextBox1.Location = new System.Drawing.Point(77, 175);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(247, 96);
-            this.richTextBox1.TabIndex = 75;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            // 
-            // txtbox_date
-            // 
-            this.txtbox_date.BackColor = System.Drawing.Color.Transparent;
-            this.txtbox_date.BorderRadius = 8;
-            this.txtbox_date.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtbox_date.DefaultText = "";
-            this.txtbox_date.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtbox_date.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtbox_date.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtbox_date.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtbox_date.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtbox_date.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbox_date.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtbox_date.Location = new System.Drawing.Point(77, 313);
-            this.txtbox_date.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtbox_date.Name = "txtbox_date";
-            this.txtbox_date.PasswordChar = '\0';
-            this.txtbox_date.PlaceholderText = "Select Username";
-            this.txtbox_date.SelectedText = "";
-            this.txtbox_date.Size = new System.Drawing.Size(247, 32);
-            this.txtbox_date.TabIndex = 74;
-            this.txtbox_date.TextChanged += new System.EventHandler(this.txtbox_date_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(74, 292);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 16);
-            this.label4.TabIndex = 73;
-            this.label4.Text = "Date";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // txtbox_books
-            // 
-            this.txtbox_books.BackColor = System.Drawing.Color.Transparent;
-            this.txtbox_books.BorderRadius = 8;
-            this.txtbox_books.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtbox_books.DefaultText = "";
-            this.txtbox_books.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtbox_books.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtbox_books.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtbox_books.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtbox_books.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtbox_books.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbox_books.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtbox_books.Location = new System.Drawing.Point(77, 137);
-            this.txtbox_books.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtbox_books.Name = "txtbox_books";
-            this.txtbox_books.PasswordChar = '\0';
-            this.txtbox_books.PlaceholderText = "Search Book";
-            this.txtbox_books.SelectedText = "";
-            this.txtbox_books.Size = new System.Drawing.Size(168, 32);
-            this.txtbox_books.TabIndex = 72;
-            this.txtbox_books.TextChanged += new System.EventHandler(this.txtbox_books_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(74, 116);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 16);
-            this.label3.TabIndex = 71;
-            this.label3.Text = "Book";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.btnSave.BorderRadius = 8;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnSave.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(124, 380);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(135, 37);
+            this.btnSave.TabIndex = 69;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtbox_username
             // 
@@ -227,86 +228,101 @@
             this.txtbox_username.TabIndex = 70;
             this.txtbox_username.TextChanged += new System.EventHandler(this.txtbox_username_TextChanged);
             // 
-            // btnSave
+            // richTextBox1
             // 
-            this.btnSave.BorderRadius = 8;
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.btnSave.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(124, 380);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(135, 37);
-            this.btnSave.TabIndex = 69;
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBox1.Enabled = false;
+            this.richTextBox1.Location = new System.Drawing.Point(77, 175);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(247, 96);
+            this.richTextBox1.TabIndex = 75;
+            this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(74, 43);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 16);
-            this.label1.TabIndex = 62;
-            this.label1.Text = "Username";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(74, 116);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 17);
+            this.label3.TabIndex = 71;
+            this.label3.Text = "Book";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // guna2Panel3
+            // txtbox_date
             // 
-            this.guna2Panel3.BorderRadius = 8;
-            this.guna2Panel3.Controls.Add(this.label1);
-            this.guna2Panel3.Controls.Add(this.btn_SearchBook);
-            this.guna2Panel3.Controls.Add(this.btnSave);
-            this.guna2Panel3.Controls.Add(this.txtbox_username);
-            this.guna2Panel3.Controls.Add(this.richTextBox1);
-            this.guna2Panel3.Controls.Add(this.label3);
-            this.guna2Panel3.Controls.Add(this.txtbox_date);
-            this.guna2Panel3.Controls.Add(this.txtbox_books);
-            this.guna2Panel3.Controls.Add(this.label4);
-            this.guna2Panel3.FillColor = System.Drawing.Color.White;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(403, 452);
-            this.guna2Panel3.TabIndex = 76;
+            this.txtbox_date.BackColor = System.Drawing.Color.Transparent;
+            this.txtbox_date.BorderRadius = 8;
+            this.txtbox_date.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtbox_date.DefaultText = "";
+            this.txtbox_date.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtbox_date.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtbox_date.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbox_date.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbox_date.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbox_date.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_date.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbox_date.Location = new System.Drawing.Point(77, 313);
+            this.txtbox_date.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_date.Name = "txtbox_date";
+            this.txtbox_date.PasswordChar = '\0';
+            this.txtbox_date.PlaceholderText = "Select Username";
+            this.txtbox_date.SelectedText = "";
+            this.txtbox_date.Size = new System.Drawing.Size(247, 32);
+            this.txtbox_date.TabIndex = 74;
+            this.txtbox_date.TextChanged += new System.EventHandler(this.txtbox_date_TextChanged);
             // 
-            // guna2Panel4
+            // txtbox_books
             // 
-            this.guna2Panel4.BorderRadius = 8;
-            this.guna2Panel4.Controls.Add(this.label5);
-            this.guna2Panel4.Controls.Add(this.Lv_Transactions);
-            this.guna2Panel4.FillColor = System.Drawing.Color.White;
-            this.guna2Panel4.Location = new System.Drawing.Point(409, 0);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(399, 452);
-            this.guna2Panel4.TabIndex = 77;
+            this.txtbox_books.BackColor = System.Drawing.Color.Transparent;
+            this.txtbox_books.BorderRadius = 8;
+            this.txtbox_books.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtbox_books.DefaultText = "";
+            this.txtbox_books.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtbox_books.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtbox_books.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbox_books.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbox_books.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbox_books.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_books.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbox_books.Location = new System.Drawing.Point(77, 137);
+            this.txtbox_books.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_books.Name = "txtbox_books";
+            this.txtbox_books.PasswordChar = '\0';
+            this.txtbox_books.PlaceholderText = "Search Book";
+            this.txtbox_books.SelectedText = "";
+            this.txtbox_books.Size = new System.Drawing.Size(168, 32);
+            this.txtbox_books.TabIndex = 72;
+            this.txtbox_books.TextChanged += new System.EventHandler(this.txtbox_books_TextChanged);
             // 
-            // Lv_Transactions
+            // label4
             // 
-            this.Lv_Transactions.HideSelection = false;
-            this.Lv_Transactions.Location = new System.Drawing.Point(12, 64);
-            this.Lv_Transactions.Name = "Lv_Transactions";
-            this.Lv_Transactions.Size = new System.Drawing.Size(374, 375);
-            this.Lv_Transactions.TabIndex = 0;
-            this.Lv_Transactions.UseCompatibleStateImageBehavior = false;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(74, 292);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 17);
+            this.label4.TabIndex = 73;
+            this.label4.Text = "Date";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label5
+            // guna2Panel5
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(77, 19);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(245, 26);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "All Lending Transactions";
+            this.guna2Panel5.BorderRadius = 8;
+            this.guna2Panel5.Controls.Add(this.label5);
+            this.guna2Panel5.CustomizableEdges.BottomLeft = false;
+            this.guna2Panel5.CustomizableEdges.BottomRight = false;
+            this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.guna2Panel5.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.Size = new System.Drawing.Size(399, 50);
+            this.guna2Panel5.TabIndex = 11;
             // 
             // TransactionsUC
             // 
@@ -320,10 +336,11 @@
             this.guna2Panel9.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel4.PerformLayout();
+            this.guna2Panel5.ResumeLayout(false);
+            this.guna2Panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -346,5 +363,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListView Lv_Transactions;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
     }
 }
