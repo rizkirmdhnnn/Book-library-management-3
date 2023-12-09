@@ -25,21 +25,9 @@ namespace Book_library_management_3.Models.Repository
         public List<History> getAllHistory()
         {
             List<History> list = new List<History>();
+            string sql = @"SELECT username, status, isbn, title ,transaction_date FROM history";
             try
             {
-                string sql = 
-                    @"SELECT  
-                        transactions.username, 
-	                    transactions.status,
-                        books.title,	
-                        transactions.isbn, 
-                        transactions.date  
-                    FROM 
-                        history
-                    JOIN 
-                        transactions ON history.transaction_id = transactions.transaction_id
-                    JOIN 
-                        books ON transactions.isbn = books.isbn;";
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
                 {
                     // membuat objek dtr (data reader) untuk menampung result  (hasil perintah SELECT)
@@ -52,20 +40,23 @@ namespace Book_library_management_3.Models.Repository
                             History histoy = new History();
                             histoy.username = dtr["username"].ToString();
                             histoy.status = dtr["status"].ToString();
-                            histoy.title = dtr["title"].ToString();
                             histoy.isbn = dtr["isbn"].ToString();
-                            histoy.date = dtr["date"].ToString();
+                            histoy.title = dtr["title"].ToString();
+                            histoy.transaction_date = dtr["transaction_date"].ToString();
                             list.Add(histoy);
                         }
                     }
                 }
-
+            }
+            catch (SQLiteException ex)
+            {
+                MessageBox.Show($"SQLite Error: {ex.Message}. Query: {sql}");
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.Print("getAllTransactions error: {0}", ex.Message);
-
+                System.Diagnostics.Debug.Print($"getAllTransactions error: {ex.Message}");
             }
+
 
             return list;
 
@@ -76,27 +67,14 @@ namespace Book_library_management_3.Models.Repository
             List<History> list = new List<History>();
             try
             {
-                string sql = @"SELECT  
-                                    transactions.username, 
-	                                transactions.status,
-                                    books.title,	
-                                    transactions.isbn, 
-                                    transactions.date  
-                                FROM 
-                                    history
-                                JOIN 
-                                    transactions ON history.transaction_id = transactions.transaction_id
-                                JOIN 
-                                    books ON transactions.isbn = books.isbn
-                                WHERE 
-	                                username LIKE @username";
+                string sql = @"SELECT username, status, isbn, title ,transaction_date FROM history WHERE username LIKE @username";
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, _connection))
                 {
                     cmd.Parameters.AddWithValue("@username", history.username + '%');
                     // membuat objek dtr (data reader) untuk menampung result  (hasil perintah SELECT)
                     using (SQLiteDataReader dtr = cmd.ExecuteReader())
                     {
-                        
+
                         // panggil method Read untuk mendapatkan baris dari set
                         while (dtr.Read())
                         {
@@ -104,9 +82,9 @@ namespace Book_library_management_3.Models.Repository
                             History histoy = new History();
                             histoy.username = dtr["username"].ToString();
                             histoy.status = dtr["status"].ToString();
-                            histoy.title = dtr["title"].ToString();
                             histoy.isbn = dtr["isbn"].ToString();
-                            histoy.date = dtr["date"].ToString();
+                            histoy.title = dtr["title"].ToString();
+                            histoy.transaction_date = dtr["transaction_date"].ToString();
                             list.Add(histoy);
                         }
                     }
@@ -121,28 +99,6 @@ namespace Book_library_management_3.Models.Repository
 
             return list;
 
-        }
-
-        public int addHistory(History history)
-        {
-            int result = 0;
-
-            string sql = @"INSERT into history (transaction_id) values (@transaction_id)";
-
-            using (SQLiteCommand cmd = new SQLiteCommand( sql, _connection))
-            {
-                cmd.Parameters.AddWithValue("@transaction_id", history.transactions_id);
-                try
-                {
-                    result = cmd.ExecuteNonQuery();
-                } catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.Print("Create error : {0}", ex.Message);
-
-                }
-            }
-
-            return result;
         }
     }
 }

@@ -33,6 +33,9 @@ namespace Book_library_management_3.Views
 
             histories = _historyControler.getAllHistory();
 
+            // Urutkan histories berdasarkan tanggal terbaru
+            histories = histories.OrderByDescending(h => h.transaction_date).ToList();
+
             foreach (History history in histories)
             {
                 var item = new ListViewItem();
@@ -40,12 +43,11 @@ namespace Book_library_management_3.Views
                 item.SubItems.Add(history.status);
                 item.SubItems.Add(history.title);
                 item.SubItems.Add(history.isbn);
-                item.SubItems.Add(history.date);
+                item.SubItems.Add(history.transaction_date);
                 lv_History.Items.Add(item);
-
             }
-
         }
+
         private void InitializeListView()
         {
             lv_History.View = System.Windows.Forms.View.Details;
@@ -75,9 +77,8 @@ namespace Book_library_management_3.Views
                 item.SubItems.Add(history.status);
                 item.SubItems.Add(history.title);
                 item.SubItems.Add(history.isbn);
-                item.SubItems.Add(history.date);
+                item.SubItems.Add(history.transaction_date);
                 lv_History.Items.Add(item);
-
             }
         }
 

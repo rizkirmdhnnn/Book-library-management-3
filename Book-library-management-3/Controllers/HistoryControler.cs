@@ -44,15 +44,6 @@ namespace Book_library_management_3.Controllers
             return list;
         }
 
-        public int addHistory(History history)
-        {
-            int result = 0;
-            using(DbContext context = new DbContext())
-            {
-                _repository = new HistoryRepository(context);
-                result = _repository.addHistory(history);
-            }
-            return result;
-        }
+
     }
 }

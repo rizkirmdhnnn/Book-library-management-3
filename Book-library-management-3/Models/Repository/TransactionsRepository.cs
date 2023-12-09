@@ -101,20 +101,6 @@ namespace Book_library_management_3.Models.Repository
                     MessageBox.Show("Berhasil Mengurangi Stock" + p.ToString());
                 }
 
-                //Membuat history
-                History history = new History();
-                using (DbContext context = new DbContext())
-                {
-                    var transaction_id = new transactionsRepository(context);
-                    history.transactions_id = transaction_id.getTransaction_id();
-
-                    using (DbContext transaction_context = new DbContext())
-                    {
-                        var _history = new HistoryRepository(transaction_context);
-                        int hasil = _history.addHistory(history);
-                        MessageBox.Show("Hasil tambah history : " + hasil.ToString());
-                    }
-                }
 
             }
 
@@ -183,20 +169,6 @@ namespace Book_library_management_3.Models.Repository
                     books.updateStocksBooks(book, '+');
                 }
 
-                //Membuat history
-                History history = new History();
-                using (DbContext context = new DbContext())
-                {
-                    var transaction_id = new transactionsRepository(context);
-                    history.transactions_id = transaction_id.getTransaction_id();
-
-                    using (DbContext transaction_context = new DbContext())
-                    {
-                        var _history = new HistoryRepository(transaction_context);
-                        int hasil = _history.addHistory(history);
-                        MessageBox.Show("Hasil tambah history : " + hasil.ToString());
-                    }
-                }
             }
 
             return result;
